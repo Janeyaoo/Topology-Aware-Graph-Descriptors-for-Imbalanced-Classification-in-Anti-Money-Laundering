@@ -1,0 +1,4 @@
+# Separate Python 3.12 environment, CUDA runtime 11.8.
+# Select the appropriate official PyTorch CUDA wheel for the target platform.
+torch==2.5.1
+numpy==1.26.4

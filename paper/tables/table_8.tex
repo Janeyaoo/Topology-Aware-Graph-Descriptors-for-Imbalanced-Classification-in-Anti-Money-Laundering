@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Detection rate by laundering typology at a 1\% alert budget.}
+\label{tab:patterns}
+\begin{threeparttable}
+\begin{tabular}{lr*{3}{>{\centering\arraybackslash}m{1.15cm}}r*{3}{>{\centering\arraybackslash}m{1.15cm}}}
+\toprule
+& \multicolumn{4}{c}{HI-Small} & \multicolumn{4}{c}{LI-Small} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Typology & $n$ & Base & \shortstack[c]{Base+\\Struct} & Full & $n$ & Base & \shortstack[c]{Base+\\Struct} & Full \\
+\midrule
+Gather--scatter & 685 & 0.384 & 0.669 & \textbf{0.685} & 158 & 0.240 & 0.318 & \textbf{0.325} \\
+Scatter--gather & 369 & \underline{0.603} & \underline{0.678} & \underline{\textbf{0.705}} & 110 & \textbf{0.338} & 0.329 & 0.332 \\
+Cycle & 271 & 0.601 & \textbf{0.677} & 0.666 & 83 & 0.360 & \underline{\textbf{0.407}} & \underline{0.406} \\
+Fan-out & 359 & 0.128 & 0.196 & \textbf{0.211} & 169 & 0.090 & \textbf{0.110} & 0.109 \\
+Fan-in & 338 & 0.536 & 0.575 & \textbf{0.583} & 85 & \underline{\textbf{0.430}} & 0.335 & 0.322 \\
+Bipartite & 491 & 0.314 & \textbf{0.344} & 0.340 & 256 & \textbf{0.245} & 0.207 & 0.198 \\
+Stack & 663 & 0.431 & \textbf{0.459} & 0.450 & 264 & \textbf{0.276} & 0.267 & 0.264 \\
+Random & 211 & 0.548 & 0.616 & \textbf{0.617} & 92 & 0.260 & \textbf{0.309} & 0.296 \\
+\midrule
+Unannotated positives & 3,187 & 0.057 & 0.066 & \textbf{0.069} & 4,136 & 0.109 & 0.122 & \textbf{0.127} \\
+All positives & 6,357 & 0.246 & 0.291 & \textbf{0.295} & 5,304 & 0.142 & 0.152 & \textbf{0.155} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Averaged over the three classifiers and five seeds. An account can belong to several typologies; ``unannotated positives'' are positive accounts outside the typology annotation. $n$ is the number of accounts in each group. Bold marks the highest rate among the three inputs for each typology and dataset; underlining marks each input's highest rate across the eight annotated typologies. Ties at the displayed precision receive the same marks. Emphasis is descriptive and does not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

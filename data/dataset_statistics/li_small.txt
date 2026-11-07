@@ -1,0 +1,7 @@
+IBM AML LI-Small Dataset Statistics
+========================================
+Transactions : 6,924,049
+Accounts     : 705,907
+  ML accounts  : 5,304 (0.75%)
+  Licit        : 700,603 (99.25%)
+Illicit txn  : 3,565 (0.05%)

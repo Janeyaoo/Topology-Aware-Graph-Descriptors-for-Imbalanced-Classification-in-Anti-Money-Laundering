@@ -1,0 +1,44 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{AUROC and threshold-based metrics after tuning.}
+\label{tab:threshold}
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{lllccccc}
+\toprule
+Dataset & Classifier & Representation & AUROC & F1 & Precision & Recall & BAcc \\
+\midrule
+HI-Small & LightGBM & Base & 0.882 $\pm$ 0.005 & 0.287 $\pm$ 0.016 & 0.536 & 0.199 & 0.598 \\
+HI-Small & LightGBM & Base+G & 0.920 $\pm$ 0.002 & 0.323 $\pm$ 0.017 & 0.538 & 0.236 & 0.617 \\
+HI-Small & LightGBM & Base+Struct & 0.921 $\pm$ 0.003 & 0.328 $\pm$ 0.019 & 0.566 & 0.233 & 0.615 \\
+HI-Small & LightGBM & Full & \textbf{0.925} $\pm$ 0.002 & \textbf{0.334} $\pm$ 0.019 & \textbf{0.580} & \textbf{0.238} & \textbf{0.618} \\
+HI-Small & XGBoost & Base & 0.883 $\pm$ 0.004 & 0.294 $\pm$ 0.015 & 0.524 & 0.205 & 0.601 \\
+HI-Small & XGBoost & Base+G & 0.917 $\pm$ 0.003 & 0.326 $\pm$ 0.017 & 0.506 & 0.243 & 0.620 \\
+HI-Small & XGBoost & Base+Struct & 0.918 $\pm$ 0.003 & \textbf{0.333} $\pm$ 0.018 & 0.521 & \textbf{0.249} & \textbf{0.623} \\
+HI-Small & XGBoost & Full & \textbf{0.922} $\pm$ 0.003 & \textbf{0.333} $\pm$ 0.015 & \textbf{0.544} & 0.244 & 0.621 \\
+HI-Small & Random forest & Base & 0.872 $\pm$ 0.003 & 0.283 $\pm$ 0.016 & \textbf{0.478} & 0.204 & 0.600 \\
+HI-Small & Random forest & Base+G & 0.914 $\pm$ 0.003 & 0.328 $\pm$ 0.014 & 0.458 & 0.258 & 0.627 \\
+HI-Small & Random forest & Base+Struct & 0.914 $\pm$ 0.003 & 0.331 $\pm$ 0.016 & 0.432 & 0.271 & 0.633 \\
+HI-Small & Random forest & Full & \textbf{0.920} $\pm$ 0.003 & \textbf{0.339} $\pm$ 0.017 & 0.456 & \textbf{0.273} & \textbf{0.635} \\
+\addlinespace
+LI-Small & LightGBM & Base & 0.864 $\pm$ 0.006 & 0.124 $\pm$ 0.009 & 0.096 & 0.187 & 0.587 \\
+LI-Small & LightGBM & Base+G & 0.908 $\pm$ 0.003 & 0.138 $\pm$ 0.008 & \textbf{0.097} & 0.252 & 0.617 \\
+LI-Small & LightGBM & Base+Struct & 0.909 $\pm$ 0.005 & 0.140 $\pm$ 0.006 & 0.095 & 0.275 & 0.627 \\
+LI-Small & LightGBM & Full & \textbf{0.913} $\pm$ 0.003 & \textbf{0.142} $\pm$ 0.007 & 0.096 & \textbf{0.282} & \textbf{0.631} \\
+LI-Small & XGBoost & Base & 0.861 $\pm$ 0.005 & 0.130 $\pm$ 0.007 & 0.100 & 0.201 & 0.593 \\
+LI-Small & XGBoost & Base+G & 0.906 $\pm$ 0.003 & 0.141 $\pm$ 0.008 & \textbf{0.101} & 0.248 & 0.615 \\
+LI-Small & XGBoost & Base+Struct & 0.907 $\pm$ 0.003 & 0.142 $\pm$ 0.006 & 0.098 & 0.271 & 0.626 \\
+LI-Small & XGBoost & Full & \textbf{0.912} $\pm$ 0.003 & \textbf{0.145} $\pm$ 0.006 & 0.099 & \textbf{0.285} & \textbf{0.632} \\
+LI-Small & Random forest & Base & 0.850 $\pm$ 0.004 & 0.119 $\pm$ 0.006 & 0.094 & 0.174 & 0.580 \\
+LI-Small & Random forest & Base+G & 0.902 $\pm$ 0.003 & 0.135 $\pm$ 0.007 & 0.094 & 0.247 & 0.614 \\
+LI-Small & Random forest & Base+Struct & 0.902 $\pm$ 0.003 & 0.133 $\pm$ 0.007 & 0.090 & \textbf{0.268} & \textbf{0.623} \\
+LI-Small & Random forest & Full & \textbf{0.909} $\pm$ 0.003 & \textbf{0.140} $\pm$ 0.006 & \textbf{0.097} & 0.260 & 0.621 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Each dataset--classifier group compares Base (16), Base+G (32), Base+Struct (44) and Full (56). AUROC and F1 are mean $\pm$ sample standard deviation over 25 shared outer folds; the other columns are means. Threshold metrics use the threshold that maximises positive-class F1 on the threshold-validation set; BAcc, balanced accuracy. Section~\ref{sec:operational} draws on this table. Bold marks the highest mean for each metric within each dataset--classifier group (higher is better). Ties at the displayed precision are bolded together; boldface does not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

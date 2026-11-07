@@ -1,0 +1,14 @@
+{
+  "n_nodes": 705907,
+  "n_undirected_edges": 875949,
+  "input_sha256": {
+    "Altman_experiments/data/li_small/li_small_trans.parquet": "bf1e3f0dd5c5cb9392cf766915e93c261d5a0e3f55d6bf00bf14bf0790d12c9d",
+    "Altman_experiments/results/li_small/features/full_features.parquet": "1d1b2f635fca921299adda7dec26380816d170f1eb7cb9e9d3dab869b1dcb261"
+  },
+  "artifact_sha256": {
+    "graph_csr.npz": "475995bfef3243707e065f08f5ca71d82518abb31fd95048f7c35b61be25b1ff",
+    "account_to_graph.npy": "b74cf7cb2459f850387c696579f1db38f953aa93df8c89f2c342454752f026f7",
+    "graph_accounts.parquet": "9bb1271b7d24ac84db4acfb6ae330508751ad87e653f47e2cb5e0cc4c02a2368"
+  },
+  "runtime_seconds": 3.1644568748306483
+}

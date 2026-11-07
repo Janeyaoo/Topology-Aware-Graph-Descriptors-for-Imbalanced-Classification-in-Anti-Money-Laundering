@@ -1,0 +1,14 @@
+% Packages required by the table/inline figure fragments.
+\usepackage{booktabs,threeparttable,multirow,array,graphicx}
+\usepackage[table]{xcolor}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\definecolor{flowblue}{HTML}{2C5F8A}
+\definecolor{floworange}{HTML}{C76418}
+\definecolor{flowteal}{HTML}{007C78}
+\definecolor{flowgray}{HTML}{6B7178}
+\newcommand{\controlAP}[2]{\ensuremath{#1_{\scriptstyle\pm#2}}}
+\newcommand{\incrementAP}[3]{\cellcolor{#1}\ensuremath{\mathbf{#2}\pm #3}}
+\newcommand{\totalSHAP}[1]{\cellcolor{flowblue!7}\ensuremath{\mathbf{#1}}}

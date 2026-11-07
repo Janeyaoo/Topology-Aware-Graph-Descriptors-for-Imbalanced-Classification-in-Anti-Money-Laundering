@@ -1,0 +1,10 @@
+IBM AML HI-Small Dataset Statistics
+=====================================
+Source file  : HI-Small_Trans.csv
+Transactions : 5,078,345
+Accounts     : 515,088
+  ML accounts  : 6,357 (1.23%)
+  Licit        : 508,731 (98.77%)
+Illicit txn  : 5,177 (0.10%)
+Currencies   : 15
+Pay formats  : 7

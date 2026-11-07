@@ -1,0 +1,12 @@
+# Additional feature/analysis dependencies; versions were not all present in
+# the selected environment records. This is a dependency list, not a lockfile.
+scipy
+networkx
+numba
+matplotlib
+Pillow
+shap
+kagglehub
+# Legacy neural comparator only; the formal optimized CUDA runner is supplied.
+torch-geometric
+# GFP additionally requires snapml==1.17.2 on a supported platform.

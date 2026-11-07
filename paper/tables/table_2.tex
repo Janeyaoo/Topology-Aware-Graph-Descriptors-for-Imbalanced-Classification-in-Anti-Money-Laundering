@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Transaction-graph structure of positive and negative accounts.}
+\label{tab:posneg}
+\begin{threeparttable}
+\begin{tabular}{lrrrr}
+\toprule
+& \multicolumn{2}{c}{HI-Small} & \multicolumn{2}{c}{LI-Small} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Statistic & Positive & Negative & Positive & Negative \\
+\midrule
+Degree: median (mean) & 4 (11.3) & 2 (2.4) & 4 (15.3) & 2 (2.4) \\
+Out-degree $D1\ge5$ & 9.1\% & 5.1\% & 8.9\% & 5.1\% \\
+In-degree $A1\ge5$ & 12.8\% & 2.5\% & 14.8\% & 2.4\% \\
+$k$-core $\ge2$ & 86.7\% & 45.2\% & 86.0\% & 45.0\% \\
+Median local set size $n_v$ & 13 & 4 & 13 & 4 \\
+Downstream reconvergence (M) & 1.3\% & 0.8\% & 0.8\% & 0.8\% \\
+Upstream reconvergence (M) & 5.1\% & 1.3\% & 5.4\% & 1.3\% \\
+Local cycle rank $\beta_1>0$ & 36.8\% & 15.6\% & 39.9\% & 15.1\% \\
+H1 bar in the two-hop sample & 19.0\% & 12.0\% & 15.9\% & 11.7\% \\
+H1 bar of lifetime 2 in the three-hop sample & 1.8\% & 1.2\% & 2.4\% & 1.1\% \\
+Three-hop sample reaches the vertex cap & 83.5\% & 48.9\% & 78.4\% & 48.3\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Shares are the fraction of accounts in each group that satisfy the condition; $D1$ and $A1$ are the numbers of direct successors and predecessors, and (M) marks descriptors of the reconvergence and branching module (Section~\ref{sec:struct}). Reconvergence, local cycle rank, H1 bars and the vertex cap are defined in Sections~\ref{sec:struct}--\ref{sec:ph}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

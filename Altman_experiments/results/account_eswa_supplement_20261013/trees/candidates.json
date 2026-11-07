@@ -1,0 +1,656 @@
+{
+  "lightgbm": [
+    {
+      "candidate_id": 0,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.05,
+        "num_leaves": 63,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 0,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 1,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.03,
+        "num_leaves": 15,
+        "min_child_samples": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 2,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.1,
+        "num_leaves": 127,
+        "min_child_samples": 50,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 3,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.1,
+        "num_leaves": 127,
+        "min_child_samples": 100,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 10.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 4,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.1,
+        "num_leaves": 31,
+        "min_child_samples": 10,
+        "subsample": 0.8,
+        "colsample_bytree": 0.6,
+        "reg_alpha": 0.0,
+        "reg_lambda": 5.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 5,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.1,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.0,
+        "reg_lambda": 5.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 6,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.6,
+        "reg_alpha": 1.0,
+        "reg_lambda": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 7,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 700,
+        "learning_rate": 0.03,
+        "num_leaves": 63,
+        "min_child_samples": 100,
+        "subsample": 0.8,
+        "colsample_bytree": 0.6,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 8,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.03,
+        "num_leaves": 127,
+        "min_child_samples": 20,
+        "subsample": 1.0,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 1.0,
+        "reg_lambda": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 9,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 700,
+        "learning_rate": 0.1,
+        "num_leaves": 63,
+        "min_child_samples": 50,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 10,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.1,
+        "num_leaves": 127,
+        "min_child_samples": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "candidate_id": 11,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.05,
+        "num_leaves": 63,
+        "min_child_samples": 50,
+        "subsample": 1.0,
+        "colsample_bytree": 0.6,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbose": -1,
+        "subsample_freq": 1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    }
+  ],
+  "xgboost": [
+    {
+      "candidate_id": 0,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 1,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "max_depth": 4,
+        "min_child_weight": 1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 10.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 2,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.03,
+        "max_depth": 8,
+        "min_child_weight": 5,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 3,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 700,
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "min_child_weight": 10,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 10.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 4,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "min_child_weight": 1,
+        "subsample": 0.7,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 10.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 5,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.1,
+        "max_depth": 8,
+        "min_child_weight": 10,
+        "subsample": 0.7,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.0,
+        "reg_lambda": 5.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 6,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "min_child_weight": 5,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 1.0,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 7,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 700,
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 8,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.03,
+        "max_depth": 6,
+        "min_child_weight": 10,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 9,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 700,
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "min_child_weight": 1,
+        "subsample": 1.0,
+        "colsample_bytree": 0.6,
+        "reg_alpha": 0.1,
+        "reg_lambda": 5.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 10,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 300,
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "min_child_weight": 5,
+        "subsample": 0.7,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 5.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    },
+    {
+      "candidate_id": 11,
+      "params": {
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "n_estimators": 500,
+        "learning_rate": 0.03,
+        "max_depth": 6,
+        "min_child_weight": 5,
+        "subsample": 0.8,
+        "colsample_bytree": 0.6,
+        "reg_alpha": 1.0,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "max_bin": 256,
+        "n_jobs": 2,
+        "verbosity": 0
+      }
+    }
+  ],
+  "random_forest": [
+    {
+      "candidate_id": 0,
+      "profile_id": 0,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 14,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "bootstrap": true,
+        "max_samples": 0.8,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 1,
+      "profile_id": 0,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 14,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "bootstrap": true,
+        "max_samples": 0.8,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 2,
+      "profile_id": 1,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 10,
+        "max_features": 0.5,
+        "bootstrap": true,
+        "max_samples": 0.8,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 3,
+      "profile_id": 1,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 10,
+        "min_samples_leaf": 10,
+        "max_features": 0.5,
+        "bootstrap": true,
+        "max_samples": 0.8,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 4,
+      "profile_id": 2,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 20,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "bootstrap": true,
+        "max_samples": 0.8,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 5,
+      "profile_id": 2,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 20,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "bootstrap": true,
+        "max_samples": 0.8,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 6,
+      "profile_id": 3,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "bootstrap": true,
+        "max_samples": 0.8,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 7,
+      "profile_id": 3,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": null,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "bootstrap": true,
+        "max_samples": 0.8,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 8,
+      "profile_id": 4,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 14,
+        "min_samples_leaf": 5,
+        "max_features": 0.5,
+        "bootstrap": true,
+        "max_samples": 0.6,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 9,
+      "profile_id": 4,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 14,
+        "min_samples_leaf": 5,
+        "max_features": 0.5,
+        "bootstrap": true,
+        "max_samples": 0.6,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 10,
+      "profile_id": 5,
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 20,
+        "min_samples_leaf": 5,
+        "max_features": 0.25,
+        "bootstrap": true,
+        "max_samples": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    },
+    {
+      "candidate_id": 11,
+      "profile_id": 5,
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 20,
+        "min_samples_leaf": 5,
+        "max_features": 0.25,
+        "bootstrap": true,
+        "max_samples": 1.0,
+        "class_weight": "balanced",
+        "n_jobs": 2
+      }
+    }
+  ]
+}

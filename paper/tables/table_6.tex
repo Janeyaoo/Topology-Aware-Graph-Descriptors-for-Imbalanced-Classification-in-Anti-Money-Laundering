@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{TreeSHAP attribution shares for the tuned Full models (\%).}
+\label{tab:shap}
+\begin{threeparttable}
+\begin{tabular}{lllrrrrrrrrr}
+\toprule
+& & & & \multicolumn{5}{c}{Directed structural layer S} & \multicolumn{3}{c}{PH layer P} \\
+\cmidrule(lr){5-9}\cmidrule(lr){10-12}
+Dataset & Classifier & Accounts & T & S total & G & M & K & E & P total & H0 & H1 \\
+\midrule
+HI-Small & LightGBM & All & \totalSHAP{34.3} & \totalSHAP{42.7} & 30.1 & 2.4 & 7.4 & 2.8 & \totalSHAP{23.1} & 20.6 & 2.5 \\
+HI-Small & LightGBM & Positive & \totalSHAP{41.7} & \totalSHAP{42.9} & 27.2 & 3.4 & 9.0 & 3.4 & \totalSHAP{15.4} & 12.8 & 2.6 \\
+HI-Small & XGBoost & All & \totalSHAP{35.6} & \totalSHAP{41.8} & 30.3 & 1.7 & 7.2 & 2.7 & \totalSHAP{22.6} & 20.3 & 2.3 \\
+HI-Small & XGBoost & Positive & \totalSHAP{51.5} & \totalSHAP{41.2} & 25.3 & 2.7 & 9.2 & 4.0 & \totalSHAP{7.3} & 3.7 & 3.6 \\
+\addlinespace
+LI-Small & LightGBM & All & \totalSHAP{32.6} & \totalSHAP{50.8} & 32.9 & 2.6 & 11.2 & 4.2 & \totalSHAP{16.6} & 14.4 & 2.2 \\
+LI-Small & LightGBM & Positive & \totalSHAP{35.0} & \totalSHAP{54.8} & 32.2 & 3.4 & 14.9 & 4.4 & \totalSHAP{10.2} & 8.1 & 2.1 \\
+LI-Small & XGBoost & All & \totalSHAP{32.4} & \totalSHAP{47.7} & 29.6 & 2.2 & 12.0 & 3.8 & \totalSHAP{19.9} & 18.0 & 1.9 \\
+LI-Small & XGBoost & Positive & \totalSHAP{39.7} & \totalSHAP{52.4} & 27.0 & 4.1 & 15.8 & 5.4 & \totalSHAP{7.9} & 5.3 & 2.6 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Averaged over 25 outer folds. A share sums the mean absolute per-feature SHAP values within a group and divides by the all-feature total. S total=G+M+K+E, P total=H0+H1, and T+S total+P total=100\% before rounding. Totals are computed before rounding; displayed component sums can differ slightly. The three total columns T, S and P are bold and lightly shaded to identify their summary role, not a ranking. All component shares retain the whole-model denominator. ``All'' and ``Positive'' denote all test accounts and positive test accounts. Layer and module definitions follow Figure~\ref{fig:framework} and Sections~\ref{sec:layers}--\ref{sec:ph}. Random forest is omitted because TreeSHAP is costly for its deep fitted trees (Section~\ref{sec:shapmethod}). Attribution shares describe model reliance, not shares of AP improvement or independent information; emphasis does not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

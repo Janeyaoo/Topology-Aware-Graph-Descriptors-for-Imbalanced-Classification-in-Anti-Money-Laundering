@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Descriptive statistics of the datasets and transaction graphs.}
+\label{tab:data}
+\begin{threeparttable}
+\begin{tabular}{lrr}
+\toprule
+Statistic & HI-Small & LI-Small \\
+\midrule
+Observation period & 1--18 Sep 2022 (17.7 days) & 1--17 Sep 2022 (16.6 days) \\
+Transactions & 5,078,345 & 6,924,049 \\
+\quad of which self-transfers & 591,212 (11.6\%) & 804,477 (11.6\%) \\
+Laundering transactions (share) & 5,177 (0.1019\%) & 3,565 (0.0515\%) \\
+Accounts & 515,088 & 705,907 \\
+Positive accounts (share) & 6,357 (1.2342\%) & 5,304 (0.7514\%) \\
+Directed simple edges & 647,939 & 880,800 \\
+Undirected edges (reciprocal pairs) & 644,246 (3,693) & 875,949 (4,851) \\
+Isolated accounts (share) & 92,354 (17.9\%) & 129,126 (18.3\%) \\
+Degree: median / 99th pct.\ / max & 2 / 12 / 14,775 & 2 / 12 / 19,727 \\
+Maximum $k$-core & 5 & 5 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Degree is the number of distinct counterparties in the undirected simple graph $U$; isolated accounts have no edge after self-loops are removed, i.e.\ they only make self-transfers; pct., percentile. Size statistics related to descriptor construction are given in Table~\ref{tab:complexity}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

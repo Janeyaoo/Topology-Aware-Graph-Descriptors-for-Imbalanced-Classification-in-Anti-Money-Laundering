@@ -1,0 +1,73 @@
+\begin{table}[p]
+\centering
+\footnotesize
+\caption{Recorded model fitting, complete-fold and inference times.}
+\label{tab:timing}
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{llrrrr}
+\toprule
+\multicolumn{6}{l}{\textit{A. Model fitting: means over 25 outer folds}} \\
+\midrule
+& & \multicolumn{2}{c}{HI-Small} & \multicolumn{2}{c}{LI-Small} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Model & Input & \shortstack{Search fit\\(min/fold)} & \shortstack{Final fit\\(s/model)} & \shortstack{Search fit\\(min/fold)} & \shortstack{Final fit\\(s/model)} \\
+\midrule
+\multirow{3}{*}{LightGBM\tnote{a}} & Base (16) & \textbf{1.13} & \textbf{4.2} & \textbf{1.38} & \textbf{2.6} \\
+ & Base+Struct (44) & 2.34 & 7.2 & 2.81 & 10.1 \\
+ & Full (56) & 2.38 & 7.7 & 2.54 & 6.6 \\
+\addlinespace[3pt]
+\multirow{3}{*}{XGBoost\tnote{a}} & Base (16) & \textbf{0.94} & \textbf{1.9} & \textbf{1.10} & \textbf{2.2} \\
+ & Base+Struct (44) & 1.71 & 4.4 & 2.09 & 4.4 \\
+ & Full (56) & 2.11 & 5.4 & 2.37 & 6.0 \\
+\addlinespace[3pt]
+\multirow{3}{*}{Random forest\tnote{a}} & Base (16) & \textbf{13.10} & 80.2 & 18.68 & 114.4 \\
+ & Base+Struct (44) & 13.99 & 58.5 & \textbf{18.45} & 78.8 \\
+ & Full (56) & 14.63 & \textbf{57.5} & 19.14 & \textbf{78.1} \\
+\addlinespace[3pt]
+\multirow{4}{*}{MLP\tnote{b}} & Base (16) & 17.03 & 36.6 & 20.54 & 46.9 \\
+ & Base+G (32) & 14.52 & 48.3 & 16.55 & 51.2 \\
+ & Base+Struct (44) & 12.46 & 36.6 & 14.16 & 36.9 \\
+ & Full (56) & \textbf{9.99} & \textbf{32.6} & \textbf{11.70} & \textbf{29.8} \\
+\addlinespace[3pt]
+\multirow{4}{*}{GraphSAGE\tnote{b}} & Base (16) & 112.01 & 155.3 & 134.42 & 184.5 \\
+ & Base+G (32) & 88.89 & 152.0 & 117.80 & 167.6 \\
+ & Base+Struct (44) & 74.38 & 109.5 & 90.81 & 115.2 \\
+ & Full (56) & \textbf{73.04} & \textbf{94.9} & \textbf{89.00} & \textbf{106.6} \\
+\addlinespace[3pt]
+GFP+LightGBM\tnote{c} & GFP (712) & 14.05 & 70.1 & 18.72 & 92.1 \\
+GFP+XGBoost\tnote{c} & GFP (712) & 15.62 & 45.3 & 18.18 & 68.3 \\
+GFP+Random forest\tnote{c} & GFP (712) & 248.19 & 743.4 & 351.51 & 521.5 \\
+\midrule
+\multicolumn{6}{l}{\textit{B. Tree-model complete-fold elapsed time and inference}} \\
+\midrule
+& & \multicolumn{2}{c}{HI-Small} & \multicolumn{2}{c}{LI-Small} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Model & Input & \shortstack{Fold wall\\(min)} & \shortstack{Inference\\($\mu$s/account)} & \shortstack{Fold wall\\(min)} & \shortstack{Inference\\($\mu$s/account)} \\
+\midrule
+\multirow{3}{*}{LightGBM\tnote{a}} & Base (16) & \textbf{1.6} & \textbf{3.0} & \textbf{1.8} & 2.0 \\
+ & Base+Struct (44) & 3.1 & 5.6 & 3.8 & 3.4 \\
+ & Full (56) & 3.2 & 7.1 & 3.3 & \textbf{1.7} \\
+\addlinespace[3pt]
+\multirow{3}{*}{XGBoost\tnote{a}} & Base (16) & \textbf{1.1} & \textbf{0.5} & \textbf{1.4} & \textbf{0.5} \\
+ & Base+Struct (44) & 2.1 & 0.7 & 2.5 & 0.6 \\
+ & Full (56) & 2.6 & 0.8 & 3.0 & 0.8 \\
+\addlinespace[3pt]
+\multirow{3}{*}{Random forest\tnote{a}} & Base (16) & \textbf{19.6} & 5.8 & 27.2 & 5.9 \\
+ & Base+Struct (44) & \textbf{19.6} & 5.8 & \textbf{25.3} & \textbf{5.6} \\
+ & Full (56) & 19.9 & \textbf{5.7} & 25.9 & \textbf{5.6} \\
+\midrule
+\multicolumn{6}{l}{\textit{C. GFP tree models\tnote{c}: median complete-fold elapsed time}} \\
+\midrule
+Model & Input & \multicolumn{2}{c}{HI-Small (min)} & \multicolumn{2}{c}{LI-Small (min)} \\
+GFP+LightGBM & GFP (712) & \multicolumn{2}{c}{18.3} & \multicolumn{2}{c}{24.9} \\
+GFP+XGBoost & GFP (712) & \multicolumn{2}{c}{19.0} & \multicolumn{2}{c}{22.2} \\
+GFP+Random forest & GFP (712) & \multicolumn{2}{c}{274.6} & \multicolumn{2}{c}{386.5} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Search fit sums the 12-candidate, three-fold inner search; final fit denotes one selected model (25-fold means). Shared random-forest fits and reused anchor fits retain their actual timings. Fold wall is the complete-workflow median over 25 outer folds, including search and calibration; inference averages five seed-0 folds using two CPU threads. Graph and feature construction are excluded. Environments: a, arm64 CPU (two threads); b, one shared RTX4090 (MLP, 4--8 workers; GraphSAGE, up to 10); c, remote x86\_64 CPU (two threads per fit; variable concurrency, up to four GFP folds). Timings describe the recorded pipelines and environments, not a common-hardware speed ranking. Bold marks within-model minima across inputs for each dataset and metric; displayed ties are included.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,35 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Transaction aggregate layer T (columns 1--16).}
+\label{tab:dict-t}
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{@{}rL{3.05cm}L{4.6cm}L{6.6cm}@{}}
+\toprule
+No. & Column & Definition & Description \\
+\midrule
+1 & \texttt{n\_sent} & $n_s=\#S_v$ & Number of sent transactions \\
+2 & \texttt{vol\_sent} & $\sum_{i\in S_v}a_i^{p}$ & Total amount paid \\
+3 & \texttt{avg\_sent} & $\bar a_s=n_s^{-1}\sum_{i\in S_v}a_i^{p}$ & Mean amount paid \\
+4 & \texttt{std\_sent} & $\bigl[\sum_{i\in S_v}(a_i^{p}-\bar a_s)^2/(n_s-1)\bigr]^{1/2}$ & Sample standard deviation of amounts paid \\
+5 & \texttt{max\_sent} & $\max_{i\in S_v}a_i^{p}$ & Largest single payment \\
+6 & \texttt{n\_recv\_banks} & $\#\{t_i:i\in S_v\}$ & Distinct payee accounts (the legacy name counts accounts, not banks) \\
+7 & \texttt{n\_recv} & $n_r=\#R_v$ & Number of received transactions \\
+8 & \texttt{vol\_recv} & $\sum_{i\in R_v}a_i^{r}$ & Total amount received \\
+9 & \texttt{avg\_recv} & $\bar a_r=n_r^{-1}\sum_{i\in R_v}a_i^{r}$ & Mean amount received \\
+10 & \texttt{std\_recv} & $\bigl[\sum_{i\in R_v}(a_i^{r}-\bar a_r)^2/(n_r-1)\bigr]^{1/2}$ & Sample standard deviation of amounts received \\
+11 & \texttt{max\_recv} & $\max_{i\in R_v}a_i^{r}$ & Largest single receipt \\
+12 & \texttt{n\_sent\_banks} & $\#\{s_i:i\in R_v\}$ & Distinct payer accounts (the legacy name counts accounts, not banks) \\
+13 & \texttt{n\_currencies} & $\#\{c_i^{r}:i\in S_v\cup R_v\}$ & Distinct receiving currencies over all transactions of the account \\
+14 & \texttt{n\_formats} & $\#\{f_i:i\in S_v\cup R_v\}$ & Distinct payment formats \\
+15 & \texttt{sent\_recv\_ratio} & $\texttt{vol\_sent}/(\texttt{vol\_recv}+10^{-9})$ & Ratio of amounts paid to amounts received; the constant only stabilises the denominator \\
+16 & \texttt{degree} & $n_s+n_r$ & Transactions taken part in; a self-transfer counts twice \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} $S_v$ and $R_v$ are the transactions sent and received by $v$ (Section~\ref{sec:problem}). This layer keeps repeated transactions and self-transfers, and amounts are original values without currency conversion.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

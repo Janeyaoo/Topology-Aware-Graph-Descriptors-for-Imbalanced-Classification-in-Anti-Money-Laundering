@@ -1,0 +1,142 @@
+{
+  "status": "design_only_not_executed",
+  "client_date": "2026-10-13",
+  "inherited_protocol": "Altman_experiments/results/account_gmkep56_tuned_20261008/protocol.json",
+  "account_identity": "Exact account_order and labels, complete account population, isolated accounts retained.",
+  "evaluation": "Static full-observation transductive account classification. No transaction-label graph sampling.",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "outer_n_splits": 5,
+  "inner_n_splits": 3,
+  "candidates_per_model": 12,
+  "split_manifest_source": "Altman_experiments/results/account_gmkep56_tuned_20261008/split_manifest.json",
+  "tree_candidates_source_sha256": "686557b65476471c0d22c87c7e035dff46db2d43a5bc5becd2b92a3666365c20",
+  "selection": "unweighted mean of three inner-fold AP values",
+  "candidate_tie_break": "exact tie: lowest candidate_id",
+  "development_threshold_split": "reuse old inner_fit and inner_calibration, 80/20 of outer_train",
+  "early_stopping": {
+    "metric": "unweighted AUROC",
+    "patience": 30,
+    "validation_fraction": 0.2
+  },
+  "threshold_selection": "max positive-class F1 on independent threshold_validation; ties lowest threshold",
+  "rounds_or_epochs": "integer median across selected three inner fits",
+  "tree_model_state_formula": "100 * seed + fold",
+  "class_weighting": "balanced from actual fitting labels; XGB sample_weight; eval unweighted",
+  "gnn_weighting": "Global balanced weights computed from fit labels; seed-only BCE, minibatch mean weighted loss.",
+  "gnn_preprocessing": "Nonnegative BASE magnitude log1p, then standardization; fit scaler on current fit subset only. Identity and labels are never model inputs.",
+  "gnn_log1p_columns": [
+    "n_sent",
+    "vol_sent",
+    "avg_sent",
+    "std_sent",
+    "max_sent",
+    "n_recv_banks",
+    "n_recv",
+    "vol_recv",
+    "avg_recv",
+    "std_recv",
+    "max_recv",
+    "n_sent_banks",
+    "n_currencies",
+    "n_formats",
+    "sent_recv_ratio",
+    "degree"
+  ],
+  "metrics_primary": [
+    "ap"
+  ],
+  "metrics_auxiliary": [
+    "auc",
+    "f1",
+    "precision",
+    "recall",
+    "balanced_accuracy",
+    "accuracy"
+  ],
+  "threshold_policies": [
+    "inner_max_f1",
+    "fixed_0.5"
+  ],
+  "alarm_budgets": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "alarm_ties": "score descending then source account row ascending; same k rounding as existing supplementary code",
+  "inference_primary": "mean paired increments, sample SD(ddof=1), positive folds and complete seed OOF consistency",
+  "optional_p_values": "Approximate corrected-CV/Holm sensitivity only; freeze new families and acknowledge residual graph dependence; do not convert to independent confirmation.",
+  "geometry": {
+    "source": "account_s10_increment_20261008 existing samples",
+    "cap": 40,
+    "sampling": "path-preserving shared BFS prefix; lexicographic ID within layer",
+    "H0": "same exact original six encoded columns, not independent PH shape"
+  },
+  "gfp": {
+    "method": "official Snap ML GFP with documented account adaptation",
+    "native_schema_dim": null,
+    "account_dim_formula": "16+6q",
+    "input": "float64 [unique transaction_id, source_id, target_id, seconds_timestamp, amount_paid, amount_received]",
+    "window_seconds": 604800,
+    "pattern_bins": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "cycle_bins": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cycle_max_length": 6,
+    "max_no_edges": -1,
+    "vertex_stats_cols": [
+      4,
+      5
+    ],
+    "vertex_stats_feats": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "account_aggregates": [
+      "out_sum",
+      "out_mean",
+      "out_max",
+      "in_sum",
+      "in_mean",
+      "in_max"
+    ],
+    "undefined_engineered_statistics": "nonfinite native engineered values -> 0, count by column; never drop accounts or impute indexing fields",
+    "time_ties": "timestamp group; stable original_row_id order; explicit partial_fit(group) then query same IDs only after native duplicate-ID and tie-batch tests pass",
+    "freeze_before_training": [
+      "package wheel hash/version",
+      "example commit or permalink",
+      "get_params full dict",
+      "native engineered column schema",
+      "same-time and batch semantics",
+      "label-blind identity and finite values"
+    ],
+    "not_equivalent": "Native temporal directed multigraph GFP vs static simple-graph FlowTopo; report this input-view difference."
+  },
+  "existing_graph32_state": "remains paused_by_user; no old partial setting is promoted to complete.",
+  "new_runners": "not implemented by this design generator; implementation and resource gates precede any training."
+}

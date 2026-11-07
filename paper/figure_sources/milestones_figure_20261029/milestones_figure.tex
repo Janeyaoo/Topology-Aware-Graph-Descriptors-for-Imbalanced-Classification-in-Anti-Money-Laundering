@@ -1,0 +1,169 @@
+% Editable, vector-native TikZ artwork. Compile with preview.tex or build.py.
+% Provenance: ../positioning_figure_20261028/positioning_figure.tex, panel (a).
+% Same A--K studies and cited-version years; details from literature_sources.md.
+% Canvas: 32 x 13 units, each 1.016 cm = 12.8 x 5.2 inches (compact 32:13).
+% Descriptive card text moved to the manuscript related-work review, 2026-11-06.
+% Connectors use vertical / right-angle segments on the lowest artwork layer.
+\begingroup
+\definecolor{msink}{HTML}{000000}
+\definecolor{msblue}{HTML}{173F73}
+\definecolor{msred}{HTML}{982F3A}
+\definecolor{msorange}{HTML}{C76418}
+\definecolor{msmuted}{HTML}{000000}
+\newcommand{\msbody}{\rmfamily\fontsize{12.5}{15}\selectfont}
+\newcommand{\msyear}{\rmfamily\fontsize{20}{24}\selectfont}
+\newcommand{\msheading}{\rmfamily\fontsize{16}{19}\selectfont\bfseries}
+\newcommand{\mslegend}{\rmfamily\fontsize{14}{16}\selectfont\bfseries}
+\begin{tikzpicture}[x=1.016cm,y=-1.016cm,text=msink,text opacity=1,
+  every node/.append style={execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000}},
+  milestone/.style={circle,minimum size=5.5mm,inner sep=0pt,outer sep=0pt,
+    font=\rmfamily\fontsize{10.95}{11}\selectfont\bfseries,text=white},
+  card/.style={rectangle,rounded corners=2pt,fill=white,line width=2.6pt,
+    inner sep=0pt,outer sep=0pt},
+  detail/.style={anchor=north west,align=flush left,inner sep=0pt,outer sep=0pt,font=\msbody},
+  connector/.style={-{Stealth[length=3mm,width=2mm]},
+    line width=3.3pt,opacity=.20,line cap=butt,line join=miter}]
+\path[use as bounding box] (0,0) rectangle (32,13);
+
+% White page is beneath all artwork, including connectors.
+\begin{pgfonlayer}{background}
+  \fill[white] (0,0) rectangle (32,13);
+\end{pgfonlayer}
+
+% Three parallel methodological routes, preserving the source panel's structure.
+% Larger category labels use the existing left margin, without moving the axis.
+\node[detail,text=msblue,font=\mslegend,text width=4.35cm] (lane1) at (.50,.18)
+  {Explicit graph\\analysis and\\descriptors};
+\node[detail,text=msred,font=\mslegend,text width=4.35cm] (lane2) at (.50,1.98)
+  {Learned graph\\representations};
+\node[detail,text=msorange,font=\mslegend,text width=4.35cm] (lane3) at (.50,3.15)
+  {General PH\\methods};
+
+% Piecewise time map: x(2008)=5.2; x(2016)=8.2;
+% x(year>=2016)=8.2+2.2*(year-2016). Only the dashed early span is compressed.
+\foreach \yy/\cc/\dash in {1.10/msblue/solid,2.30/msred/solid,3.50/msorange/densely dashed}{
+  \draw[\cc,opacity=.46,line width=2.4pt,densely dashed] (5.2,\yy)--(8.2,\yy);
+  \draw[\cc,opacity=.46,line width=2.4pt,\dash] (8.2,\yy)--(30.55,\yy);
+}
+
+\node[milestone,fill=msblue] (mA) at (5.2,1.10) {A};
+\node[milestone,fill=msblue] (mB) at (10.4,1.10) {B};
+\node[milestone,fill=msred] (mC) at (14.8,2.30) {C};
+\node[milestone,fill=msblue] (mD) at (17.0,1.10) {D};
+\node[milestone,fill=msorange] (mE) at (17.0,3.50) {E};
+\node[milestone,fill=msred] (mF) at (21.4,2.30) {F};
+\node[milestone,fill=msorange] (mG) at (21.4,3.50) {G};
+\node[milestone,fill=msred] (mH) at (23.6,2.30) {H};
+\node[milestone,fill=msred] (mI) at (25.8,2.30) {I};
+\node[milestone,fill=msblue] (mJ) at (25.8,1.10) {J};
+\node[milestone,rectangle,rounded corners=1pt,fill=msblue,minimum size=6.3mm]
+  (mK) at (30.2,1.10) {K};
+
+\draw[msmuted,line width=2.2pt,densely dashed] (5.2,4.25)--(8.2,4.25);
+\draw[msmuted,line width=2.2pt] (8.2,4.25)--(30.55,4.25);
+\foreach \xx/\year in {5.2/2008,8.2/2016,10.4/2017,12.6/2018,14.8/2019,17/2020,19.2/2021,21.4/2022,23.6/2023,25.8/2024,28/2025,30.2/2026}{
+  \draw[msmuted,line width=2pt] (\xx,4.25)--(\xx,4.42);
+  \node[anchor=north,inner sep=0pt,font=\msyear,text=msink,text opacity=1] (year\year) at (\xx,4.62) {\year};
+}
+% Break slashes make the compressed segment visible even in monochrome.
+\fill[white] (6.38,4.08) rectangle (6.99,4.42);
+\draw[msmuted,line width=2.4pt] (6.45,4.40)--(6.60,4.10) (6.77,4.40)--(6.92,4.10);
+
+% Row 1: explicit graph analysis / descriptors. White cards mask long leaders.
+\node[card,draw=msblue!80,minimum width=5.6*1.016cm,minimum height=1.70*1.016cm,
+  anchor=north west] (cA) at (.70,5.95) {};
+\node[detail,anchor=west,text width=5.12cm] (tA) at (.98,6.80)
+  {\textcolor{msblue}{\msheading A\enspace\href{https://eagereyes.org/publications/Chang-InfoVis-2008}{Chang et al.}\\(2008)}};
+
+\node[card,draw=msblue!80,minimum width=6.4*1.016cm,minimum height=1.70*1.016cm,
+  anchor=north west] (cB) at (6.70,5.95) {};
+\node[detail,anchor=west,text width=5.90cm] (tB) at (6.98,6.80)
+  {\textcolor{msblue}{\msheading B\enspace\href{https://doi.org/10.1016/j.eswa.2016.09.029}{Fronzetti Colladon\\\& Remondi (2017)}}};
+
+\node[card,draw=msblue!80,minimum width=5.6*1.016cm,minimum height=1.70*1.016cm,
+  anchor=north west] (cD) at (13.50,5.95) {};
+\node[detail,anchor=west,text width=5.12cm] (tD) at (13.78,6.80)
+  {\textcolor{msblue}{\msheading D\enspace\href{https://ijcai.org/proceedings/2020/612}{BitcoinHeist}\\(2020)}};
+
+\node[card,draw=msblue!80,minimum width=5.0*1.016cm,minimum height=1.70*1.016cm,
+  anchor=north west] (cJ) at (19.50,5.95) {};
+\node[detail,anchor=west,text width=4.52cm] (tJ) at (19.78,6.80)
+  {\textcolor{msblue}{\msheading J\enspace\href{https://doi.org/10.1145/3677052.3698674}{GFP}\enspace(2024)}};
+
+\node[card,draw=msblue,line width=3.6pt,minimum width=6.2*1.016cm,
+  minimum height=1.70*1.016cm,anchor=north west] (cK) at (24.90,5.95) {};
+\node[detail,anchor=west,text width=5.73cm] (tK) at (25.18,6.80)
+  {\textcolor{msblue}{\msheading K\enspace TopoAML\enspace(2026)}};
+
+% Row 2: all four learned-representation papers, in publication-year order.
+\node[card,draw=msred!80,minimum width=7.25*1.016cm,minimum height=1.70*1.016cm,
+  anchor=north west] (cC) at (.70,8.45) {};
+\node[detail,anchor=west,text width=6.65cm] (tC) at (1.04,9.30)
+  {\textcolor{msred}{\msheading C\enspace\href{https://arxiv.org/abs/1908.02591}{Weber et al.}\enspace(2019)}};
+
+\node[card,draw=msred!80,minimum width=7.25*1.016cm,minimum height=1.70*1.016cm,
+  anchor=north west] (cF) at (8.35,8.45) {};
+\node[detail,anchor=west,text width=6.65cm] (tF) at (8.69,9.30)
+  {\textcolor{msred}{\msheading F\enspace\href{https://arxiv.org/abs/2210.14360}{LaundroGraph}\enspace(2022)}};
+
+\node[card,draw=msred!80,minimum width=7.65*1.016cm,minimum height=1.70*1.016cm,
+  anchor=north west] (cI) at (23.65,8.45) {};
+\node[detail,anchor=west,text width=7.06cm] (tI) at (23.99,9.30)
+  {\textcolor{msred}{\msheading I\enspace\href{https://doi.org/10.1609/aaai.v38i10.29069}{Egressy et al.}\enspace(2024)}};
+
+% Row 3: the two general PH methods form a centred pair with dashed borders.
+\node[card,draw=msorange!90,densely dashed,minimum width=9.1*1.016cm,
+  minimum height=1.70*1.016cm,anchor=north west] (cE) at (6.70,10.95) {};
+\node[detail,anchor=west,text width=8.55cm] (tE) at (7.04,11.80)
+  {\textcolor{msorange}{\msheading E\enspace\href{https://proceedings.mlr.press/v119/hofer20b.html}{Graph Filtration Learning}\\(2020)}};
+
+\node[card,draw=msorange!90,densely dashed,minimum width=9.1*1.016cm,
+  minimum height=1.70*1.016cm,anchor=north west] (cG) at (16.20,10.95) {};
+\node[detail,anchor=west,text width=8.55cm] (tG) at (16.54,11.80)
+  {\textcolor{msorange}{\msheading G\enspace\href{https://openreview.net/forum?id=oxxUMeFwEHd}{TOGL}\enspace(2022)}};
+
+\node[card,draw=msred!80,minimum width=7.25*1.016cm,minimum height=1.70*1.016cm,
+  anchor=north west] (cH) at (16.00,8.45) {};
+\node[detail,anchor=west,text width=6.65cm] (tH) at (16.34,9.30)
+  {\textcolor{msred}{\msheading H\enspace\href{https://doi.org/10.1007/s10489-023-04504-9}{Inspection-L}\enspace(2023)}};
+
+% Arrow targets: keep existing vertical leaders where the first-row card permits;
+% route the other studies to their card centres using staggered right-angle bends.
+\foreach \id in {A,B,C,D,E,F,G,H,I,J,K}{
+  \coordinate (q\id) at (m\id.south |- c\id.north);
+}
+\foreach \id in {C,E,F,G,H,I,J}{
+  \coordinate (q\id) at (c\id.north);
+}
+
+% Lowest artwork layer. Different bend heights keep same-route leaders separate.
+% White under-strokes make crossings readable; opaque cards mask passing lines.
+\begin{pgfonlayer}{background}
+  \foreach \id/\cc/\yy in {E/msorange/10.50,G/msorange/10.64,A/msblue/5.45,B/msblue/5.45,D/msblue/5.45,J/msblue/5.45,K/msblue/5.45,C/msred/7.76,F/msred/7.89,H/msred/8.02,I/msred/8.15}{
+    \coordinate (channel\id) at (0,\yy);
+    \coordinate (r\id a) at (m\id.south);
+    \coordinate (r\id b) at (m\id.south |- channel\id);
+    \coordinate (r\id c) at (q\id |- channel\id);
+    \coordinate (r\id d) at (q\id);
+    \draw[white,line width=6.2pt,line join=miter]
+      (r\id a)--(r\id b)--(r\id c)--(r\id d);
+    \draw[connector,\cc] (r\id a)--(r\id b)--(r\id c)--(r\id d);
+  }
+\end{pgfonlayer}
+
+% Audit every card, text block, marker and connector endpoint in TeX points.
+\ifdefined\MilestoneAudit
+  \foreach \id in {lane1,lane2,lane3,year2008,year2016,year2017,year2018,year2019,year2020,year2021,year2022,year2023,year2024,year2025,year2026,mA,mB,mC,mD,mE,mF,mG,mH,mI,mJ,mK}{
+    \path let \p1=(\id.south west),\p2=(\id.north east) in
+      \pgfextra{\typeout{MSLABEL:\id:\x1:\y1:\x2:\y2}};
+  }
+  \foreach \id in {A,B,C,D,E,F,G,H,I,J,K}{
+    \path let \p1=(c\id.south west),\p2=(c\id.north east),
+      \p3=(t\id.south west),\p4=(t\id.north east),
+      \p5=(r\id a),\p6=(r\id b),\p7=(r\id c),\p8=(r\id d) in
+      \pgfextra{\typeout{MSBOUND:\id:\x1:\y1:\x2:\y2:\x3:\y3:\x4:\y4}%
+        \typeout{MSARROW:\id:\x5:\y5:\x6:\y6:\x7:\y7:\x8:\y8}};
+  }
+\fi
+\end{tikzpicture}
+\endgroup

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "extension_settings": 4,
+  "extension_outer_folds": 100,
+  "extension_budget_rows": 300,
+  "combined_settings": 46,
+  "combined_summary_rows": 138,
+  "input_manifest_sha256": "bc084917756963430dc0d9d3d061bdf5b9601f5db98938153ecafd6680e01677",
+  "remote_result_sha256": "4677c3c822d9d3074c712f1e7f8e79ef4acb9cdef22f8e6e286fba9d663d18e9",
+  "old_summary_path": "Altman_experiments/results/account_unified_alert_budget_20261028/final/budget_summary.csv",
+  "old_summary_sha256": "13f569409a7a62b03ecb5105029289ad60160263d7d7924a1140ccaaddab0148",
+  "remote_selection_check": "stable descending score with ascending row_index equals independent partition boundary selection",
+  "checks": [
+    "200 DONE/receipt seals match completed training acceptance",
+    "100 prediction payload SHAs match their sealed tuned DONE records",
+    "canonical account IDs, labels and outer-test rows agree",
+    "AP reproduces the 100 formal fold metrics within 1e-10",
+    "independent partition boundary selection matches stable ranking at all 300 fold budgets",
+    "all fold means and sample SDs rebuilt locally from integer counts",
+    "original 126 summary rows retained in combined output"
+  ],
+  "output_sha256": {
+    "summarize_budget_extension.py": "58d02d8d5c80285da22670bb17dfa988176338cddd516b8d4ece6f73bfa4dccb",
+    "budget_inputs.json": "bc084917756963430dc0d9d3d061bdf5b9601f5db98938153ecafd6680e01677",
+    "remote_budget_result.json": "4677c3c822d9d3074c712f1e7f8e79ef4acb9cdef22f8e6e286fba9d663d18e9",
+    "run_remote_budget.py": "e9db4a3cf337a59b0aedb5772dcecc2337464f91586e3a9f245d21e81e38d446",
+    "combined_budget_summary.csv": "6196ecd89aeaf8011847cd24bf2efe3509dce405226888a90e48558668f20f79",
+    "budget_seed_values.csv": "ab4ff09bdb8a2eb9b86c4872f3317b4e3fcd3eb1852ec2a80662e6c2e90d3845",
+    "budget_summary.csv": "752edb6e190e7b5b05f61aed06f32b699cb5bec0527a2472ad7d12d1328c2320",
+    "read_remote_gfp_budget.py": "2484bec7a48ec220392288597ef2dd53987cd01c0572617e6065aa88beeec71d",
+    "budget_fold_values.csv": "b86ae91081d5036d034fec3060b1d61d66f5ac3946615a286039f13509e2004e"
+  }
+}

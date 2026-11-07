@@ -1,0 +1,41 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 2, horizontal sep=0.9cm, vertical sep=1.5cm, yticklabels at=edge left},
+  width=7.6cm, height=4.4cm,
+  xmin=-0.02, xmax=0.08, ymin=-0.55, ymax=2.55,
+  ytick={0,1,2}, yticklabels={Random forest, XGBoost, LightGBM},
+  xtick={-0.02,0,0.02,0.04,0.06,0.08},
+  scaled x ticks=false,
+  xticklabel style={/pgf/number format/.cd, fixed, fixed zerofill, precision=2},
+  tick label style={font=\scriptsize}, label style={font=\footnotesize},
+  title style={font=\footnotesize, yshift=-0.8ex},
+  xmajorgrids, grid style={gray!20}, axis line style={gray!70}, tick align=outside, ytick style={draw=none},
+  every axis plot/.append style={line width=0.6pt},
+  error bars/error bar style={line width=0.6pt},
+  error bars/error mark options={rotate=90, mark size=2pt, line width=0.6pt}]
+\nextgroupplot[title={(a) HI-Small: Base+Struct $-$ Base},
+  legend style={at={(1.05,1.32)}, anchor=south, legend columns=2, draw=none, font=\footnotesize, /tikz/every even column/.append style={column sep=0.6cm}}]
+\draw[gray!70] (axis cs:0,-0.55) -- (axis cs:0,2.55);
+\addplot[only marks, mark=o, mark size=2.2pt, color=flowgray, error bars/.cd, x dir=both, x explicit] coordinates {(0.0111,-0.15) +- (0.0084,0) (0.0506,0.85) +- (0.0065,0) (0.0609,1.85) +- (0.0114,0)};
+\addlegendentry{Fixed parameters}
+\addplot[only marks, mark=square*, mark size=2.2pt, color=flowteal, error bars/.cd, x dir=both, x explicit] coordinates {(0.0515,0.15) +- (0.0077,0) (0.0482,1.15) +- (0.0071,0) (0.0531,2.15) +- (0.0086,0)};
+\addlegendentry{Tuned}
+\nextgroupplot[title={(b) HI-Small: Full $-$ Base+Struct}]
+\draw[gray!70] (axis cs:0,-0.55) -- (axis cs:0,2.55);
+\addplot[only marks, mark=o, mark size=2.2pt, color=flowgray, error bars/.cd, x dir=both, x explicit] coordinates {(0.0003,-0.15) +- (0.0050,0) (0.0046,0.85) +- (0.0043,0) (0.0092,1.85) +- (0.0074,0)};
+\addplot[only marks, mark=square*, mark size=2.2pt, color=flowteal, error bars/.cd, x dir=both, x explicit] coordinates {(0.0151,0.15) +- (0.0030,0) (0.0058,1.15) +- (0.0060,0) (0.0106,2.15) +- (0.0074,0)};
+\nextgroupplot[title={(c) LI-Small: Base+Struct $-$ Base}, xlabel={Paired $\Delta$AP}]
+\draw[gray!70] (axis cs:0,-0.55) -- (axis cs:0,2.55);
+\addplot[only marks, mark=o, mark size=2.2pt, color=flowgray, error bars/.cd, x dir=both, x explicit] coordinates {(0.0010,-0.15) +- (0.0045,0) (0.0150,0.85) +- (0.0043,0) (0.0230,1.85) +- (0.0070,0)};
+\addplot[only marks, mark=square*, mark size=2.2pt, color=flowteal, error bars/.cd, x dir=both, x explicit] coordinates {(0.0015,0.15) +- (0.0057,0) (0.0130,1.15) +- (0.0070,0) (0.0189,2.15) +- (0.0063,0)};
+\nextgroupplot[title={(d) LI-Small: Full $-$ Base+Struct}, xlabel={Paired $\Delta$AP}]
+\draw[gray!70] (axis cs:0,-0.55) -- (axis cs:0,2.55);
+\addplot[only marks, mark=o, mark size=2.2pt, color=flowgray, error bars/.cd, x dir=both, x explicit] coordinates {(-0.0006,-0.15) +- (0.0012,0) (-0.0002,0.85) +- (0.0036,0) (0.0015,1.85) +- (0.0040,0)};
+\addplot[only marks, mark=square*, mark size=2.2pt, color=flowteal, error bars/.cd, x dir=both, x explicit] coordinates {(0.0060,0.15) +- (0.0022,0) (0.0013,1.15) +- (0.0053,0) (0.0022,2.15) +- (0.0061,0)};
+\end{groupplot}
+\end{tikzpicture}
+\caption{Paired $\Delta$AP under fixed parameters and after tuning, for the structural layer (left) and the persistent homology layer (right). Markers show the mean of the 25 paired differences and whiskers their sample standard deviation; the vertical line marks zero.}
+\label{fig:paired}
+\end{figure}

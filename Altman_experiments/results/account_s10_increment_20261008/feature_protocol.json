@@ -1,0 +1,28 @@
+{
+  "version": "S10_matched_cap40_v1",
+  "sampling": "weak undirected radius3; center first; remaining vertices in increasing BFS layer then lexicographic account_id; retain at most40; paths retained",
+  "two_hop_PH": "subset of the shared sampled radius3 prefix with global BFS distance<=2; recompute shortest paths in this induced subgraph; at most40",
+  "three_hop_PH": "full sampled induced graph; recompute shortest paths in this induced subgraph; at most40",
+  "metric": "unweighted shortest path, no edge multiplicity/amount/time weights; self loops removed",
+  "simplicial_complexes": "flag/VR triangles at epsilon1 and2 on identical radius3 sampled vertices",
+  "PH": "F2 finite H0/H1 bars; connected H0=[0,1) count n-1; H1 birth1, death2 or3 (radius2 death2); GF2 boundary ranks/inclusion ranks; checked independently by explicit barcode reduction",
+  "S10": "real signed standard-inner-product combinatorial L0(K1),L0(K2),L1(K1),L1(K2),true L1^(1,2) via restricted chains/Schur; each min positive eigenvalue/n and complete positive-spectrum entropy/log(positive rank)",
+  "zero_convention": "no positive eigenvalues: min=entropy=0; positive rank1 entropy0; QC rank/nullity recorded",
+  "controls": [
+    "q_n2",
+    "q_n",
+    "q_e1",
+    "q_t1",
+    "q_e2",
+    "q_t2"
+  ],
+  "node_cap": 40,
+  "radius": 3,
+  "geometry_uses_labels": false,
+  "interpretation": "static whole-period transductive account recognition; development comparison on previously studied accounts; no chronological/independent confirmation",
+  "historical_protocol_change": "P12u is newly recomputed under unified cap40, not old HI cap80 2hop or cap500->40 3hop; old results cannot be substituted",
+  "sources": [
+    "https://arxiv.org/abs/2012.02808",
+    "https://arxiv.org/pdf/2312.07563"
+  ]
+}

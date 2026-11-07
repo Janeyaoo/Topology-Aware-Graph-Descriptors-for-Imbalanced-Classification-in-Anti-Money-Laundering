@@ -1,0 +1,134 @@
+[
+  {
+    "number": "1",
+    "label": "tab:data",
+    "path": "paper/tables/table_1.tex",
+    "caption": "Descriptive statistics of the datasets and transaction graphs."
+  },
+  {
+    "number": "2",
+    "label": "tab:posneg",
+    "path": "paper/tables/table_2.tex",
+    "caption": "Transaction-graph structure of positive and negative accounts."
+  },
+  {
+    "number": "3",
+    "label": "tab:ap",
+    "path": "paper/tables/table_3.tex",
+    "caption": "Tuned average precision of the four inputs and paired increment of Full over Base+G."
+  },
+  {
+    "number": "4",
+    "label": "tab:paired",
+    "path": "paper/tables/table_4.tex",
+    "caption": "Paired increments after tuning."
+  },
+  {
+    "number": "5",
+    "label": "tab:controls",
+    "path": "paper/tables/table_5.tex",
+    "caption": "Paired AP increments from module retraining and PH controls."
+  },
+  {
+    "number": "6",
+    "label": "tab:shap",
+    "path": "paper/tables/table_6.tex",
+    "caption": "TreeSHAP attribution shares for the tuned Full models (\\%)."
+  },
+  {
+    "number": "7",
+    "label": "tab:budget",
+    "path": "paper/tables/table_7.tex",
+    "caption": "Positive-account coverage and alert precision at a 1\\% test-fold budget."
+  },
+  {
+    "number": "8",
+    "label": "tab:patterns",
+    "path": "paper/tables/table_8.tex",
+    "caption": "Detection rate by laundering typology at a 1\\% alert budget."
+  },
+  {
+    "number": "9",
+    "label": "tab:fixed",
+    "path": "paper/tables/table_9.tex",
+    "caption": "Paired $\\Delta$AP and $\\Delta$AUROC under the fixed-parameter comparator."
+  },
+  {
+    "number": "10",
+    "label": "tab:external",
+    "path": "paper/tables/table_10.tex",
+    "caption": "Account-level method and input comparisons under shared splits."
+  },
+  {
+    "number": "A.1",
+    "label": "tab:dict-t",
+    "path": "paper/tables/table_A_1.tex",
+    "caption": "Transaction aggregate layer T (columns 1--16)."
+  },
+  {
+    "number": "A.2",
+    "label": "tab:dict-s",
+    "path": "paper/tables/table_A_2.tex",
+    "caption": "Directed structural layer S (columns 17--44)."
+  },
+  {
+    "number": "A.3",
+    "label": "tab:dict-p",
+    "path": "paper/tables/table_A_3.tex",
+    "caption": "Persistent homology layer P (columns 45--56)."
+  },
+  {
+    "number": "A.4",
+    "label": "tab:complexity",
+    "path": "paper/tables/table_A_4.tex",
+    "caption": "Empirical quantities that determine the cost of descriptor construction."
+  },
+  {
+    "number": "B.1",
+    "label": "tab:decomp",
+    "path": "paper/tables/table_B_1.tex",
+    "caption": "Decomposition of tuning and workflow effects on mean $\\Delta$AP."
+  },
+  {
+    "number": "C.1",
+    "label": "tab:threshold",
+    "path": "paper/tables/table_C_1.tex",
+    "caption": "AUROC and threshold-based metrics after tuning."
+  },
+  {
+    "number": "C.2",
+    "label": "tab:graphstats",
+    "path": "paper/tables/table_C_2.tex",
+    "caption": "Base+Struct versus Base+G under fixed parameters."
+  },
+  {
+    "number": "C.3",
+    "label": "tab:budgetapp",
+    "path": "paper/tables/table_C_3.tex",
+    "caption": "Positive-account coverage at 0.5\\% and 2\\% test-fold budgets."
+  },
+  {
+    "number": "C.4",
+    "label": "tab:budgetpaired",
+    "path": "paper/tables/table_C_4.tex",
+    "caption": "Paired Recall increments beyond ordinary graph statistics at a 1\\% budget."
+  },
+  {
+    "number": "C.5",
+    "label": "tab:patternsapp",
+    "path": "paper/tables/table_C_5.tex",
+    "caption": "Detection rate by laundering typology and classifier at a 1\\% alert budget."
+  },
+  {
+    "number": "C.6",
+    "label": "tab:typoprofile",
+    "path": "paper/tables/table_C_6.tex",
+    "caption": "Structural profiles of the typology groups."
+  },
+  {
+    "number": "C.7",
+    "label": "tab:timing",
+    "path": "paper/tables/table_C_7.tex",
+    "caption": "Recorded model fitting, complete-fold and inference times."
+  }
+]

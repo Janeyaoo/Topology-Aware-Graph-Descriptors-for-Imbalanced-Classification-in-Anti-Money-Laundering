@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Paired Recall increments beyond ordinary graph statistics at a 1\% budget.}
+\label{tab:budgetpaired}
+\begin{threeparttable}
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{3}{c}{HI-Small} & \multicolumn{3}{c}{LI-Small} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Classifier & $\Delta$Recall $\pm$ SD & Positive folds & Seeds & $\Delta$Recall $\pm$ SD & Positive folds & Seeds \\
+\midrule
+LightGBM & $+0.0053 \pm 0.0110$ & 16/25 & 5/5 & $+0.0005 \pm 0.0062$ & 13/25 & 3/5 \\
+XGBoost & $+0.0056 \pm 0.0073$ & 18/25 & 5/5 & $+0.0012 \pm 0.0073$ & 15/25 & 4/5 \\
+Random forest & $\mathbf{+0.0103} \pm 0.0045$ & 25/25 & 5/5 & $\mathbf{+0.0057} \pm 0.0073$ & 18/25 & 5/5 \\
+MLP & $+0.0079 \pm 0.0081$ & 19/25 & 5/5 & $+0.0032 \pm 0.0118$ & 15/25 & 4/5 \\
+GraphSAGE & $\underline{-0.0009} \pm 0.0098$ & 13/25 & 3/5 & $\underline{-0.0022} \pm 0.0130$ & 11/25 & 1/5 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Differences are Full $-$ Base+G, calculated within each matched seed and fold; SD is the sample standard deviation of the 25 differences. Seed directions sum true positives, alerts and positives from the five already selected fold lists, without ranking scores across folds. Counts describe consistency among dependent evaluations; they do not establish statistical significance. Bold marks the largest mean Recall increment across classifiers for each dataset. Underlined means are negative; emphasis does not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Persistent homology layer P (columns 45--56).}
+\label{tab:dict-p}
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{@{}rL{3.05cm}L{4.6cm}L{6.6cm}@{}}
+\toprule
+No. & Column & Definition & Description \\
+\midrule
+45 & \texttt{ph\_2hop\_h0\_max} & $P^{\max}_{2,0}$ & Maximum finite H0 lifetime in the two-hop sample \\
+46 & \texttt{ph\_2hop\_h0\_total} & $P^{\mathrm{total}}_{2,0}$ & Total finite H0 lifetime in the two-hop sample \\
+47 & \texttt{ph\_2hop\_h0\_entropy} & $P^{\mathrm{entropy}}_{2,0}$ & Entropy of finite H0 lifetimes in the two-hop sample \\
+48 & \texttt{ph\_2hop\_h1\_max} & $P^{\max}_{2,1}$ & Maximum H1 lifetime in the two-hop sample \\
+49 & \texttt{ph\_2hop\_h1\_total} & $P^{\mathrm{total}}_{2,1}$ & Total H1 lifetime in the two-hop sample \\
+50 & \texttt{ph\_2hop\_h1\_entropy} & $P^{\mathrm{entropy}}_{2,1}$ & Entropy of H1 lifetimes in the two-hop sample \\
+51 & \texttt{ph\_3hop\_h0\_max} & $P^{\max}_{3,0}$ & Maximum finite H0 lifetime in the three-hop sample \\
+52 & \texttt{ph\_3hop\_h0\_total} & $P^{\mathrm{total}}_{3,0}$ & Total finite H0 lifetime in the three-hop sample \\
+53 & \texttt{ph\_3hop\_h0\_entropy} & $P^{\mathrm{entropy}}_{3,0}$ & Entropy of finite H0 lifetimes in the three-hop sample \\
+54 & \texttt{ph\_3hop\_h1\_max} & $P^{\max}_{3,1}$ & Maximum H1 lifetime in the three-hop sample \\
+55 & \texttt{ph\_3hop\_h1\_total} & $P^{\mathrm{total}}_{3,1}$ & Total H1 lifetime in the three-hop sample \\
+56 & \texttt{ph\_3hop\_h1\_entropy} & $P^{\mathrm{entropy}}_{3,1}$ & Entropy of H1 lifetimes in the three-hop sample \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} $P^{\max}_{h,q}$, $P^{\mathrm{total}}_{h,q}$ and $P^{\mathrm{entropy}}_{h,q}$ apply~\eqref{eq:phsummary} to the finite bars with positive lifetime in homology dimension $q$ of the VR filtration $K_h$ on the sample $S_h(v)$, $h\in\{2,3\}$ (Section~\ref{sec:ph}). The infinite H0 bar is excluded, entropies use natural logarithms without normalisation, and all three summaries are 0 for an empty barcode. Appendix~\ref{app:phexact} gives their closed forms.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

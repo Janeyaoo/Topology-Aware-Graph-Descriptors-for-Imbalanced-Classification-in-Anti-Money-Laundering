@@ -1,0 +1,32 @@
+# Local environments and editor/OS artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+*.pem
+*.key
+
+# New local executions (the compact accepted CSVs remain tracked)
+reproduced_results*/
+local_runs/
+external_artifacts/
+*.joblib
+*.pkl
+*.pt
+*.pth
+*.parquet
+*.npy
+*.npz
+
+# TeX build products
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls

@@ -1,0 +1,54 @@
+{
+  "n_accounts": 515088,
+  "cap_hit_fraction": 0.49293130494206816,
+  "radius_counts": {
+    "0": 92354,
+    "1": 38058,
+    "2": 93789,
+    "3": 290887
+  },
+  "ph2_equals_ph3_fraction": 0.4352673717888982,
+  "full_column_equalities_atol1e_10": [
+    [
+      "ph_2hop_h0_max",
+      "ph_3hop_h0_max"
+    ],
+    [
+      "s_g1_min",
+      "s_pl12_min"
+    ]
+  ],
+  "feature_unique_counts": {
+    "ph_2hop_h0_max": 2,
+    "ph_2hop_h0_total": 40,
+    "ph_2hop_h0_entropy": 39,
+    "ph_2hop_h1_max": 2,
+    "ph_2hop_h1_total": 37,
+    "ph_2hop_h1_entropy": 36,
+    "ph_3hop_h0_max": 2,
+    "ph_3hop_h0_total": 40,
+    "ph_3hop_h0_entropy": 39,
+    "ph_3hop_h1_max": 3,
+    "ph_3hop_h1_total": 38,
+    "ph_3hop_h1_entropy": 64,
+    "q_n2": 40,
+    "q_n": 40,
+    "q_e1": 126,
+    "q_t1": 112,
+    "q_e2": 706,
+    "q_t2": 4703,
+    "s_g1_min": 246038,
+    "s_g1_entropy": 214786,
+    "s_g2_min": 240908,
+    "s_g2_entropy": 206971,
+    "s_h1_min": 246031,
+    "s_h1_entropy": 214142,
+    "s_h2_min": 241242,
+    "s_h2_entropy": 201021,
+    "s_pl12_min": 246038,
+    "s_pl12_entropy": 214309
+  },
+  "field_discrepancy_source_count": 0,
+  "field_discrepancy_persistent_count": 0,
+  "runtime_seconds": 759.042096124962
+}

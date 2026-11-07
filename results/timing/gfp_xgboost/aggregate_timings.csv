@@ -1,0 +1,3 @@
+dataset,model,feature_set,representation,n_folds,search_fit_mean_s,final_model_fit_mean_s,fold_runtime_median_s,fold_runtime_median_min,inference_us_per_account,inference_status,anchor_reuse_count,threads_per_fit,observed_peak_concurrent_gfp_folds,machine,execution_device
+hi_small,xgboost,base_gfp_account_stream,GFP (712),25,937.2859257722454,45.33237156831718,1137.9592030700005,18.965986717833342,,not_separately_measured,1,2,1,x86_64,remote CPU
+li_small,xgboost,base_gfp_account_stream,GFP (712),25,1090.6210954992775,68.28569032095838,1331.6124953980034,22.193541589966724,,not_separately_measured,2,2,4,x86_64,remote CPU

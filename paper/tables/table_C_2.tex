@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Base+Struct versus Base+G under fixed parameters.}
+\label{tab:graphstats}
+\begin{threeparttable}
+\begin{tabular}{llccc}
+\toprule
+Dataset & Classifier & $\Delta$AP & $\Delta$F1 & Positive (folds; OOF) \\
+\midrule
+HI-Small & LightGBM & $+0.0038 \pm 0.0078$ & $+0.0017 \pm 0.0120$ & 19/25; 4/5 \\
+HI-Small & XGBoost & $\mathbf{+0.0050} \pm 0.0055$ & $\mathbf{+0.0063} \pm 0.0078$ & 20/25; 5/5 \\
+HI-Small & Random forest & $\underline{-0.0111} \pm 0.0064$ & $\underline{-0.0079} \pm 0.0070$ & 0/25; 0/5 \\
+LI-Small & LightGBM & $+0.0006 \pm 0.0042$ & $+0.0016 \pm 0.0068$ & 12/25; 3/5 \\
+LI-Small & XGBoost & $\mathbf{+0.0009} \pm 0.0030$ & $\mathbf{+0.0024} \pm 0.0053$ & 16/25; 5/5 \\
+LI-Small & Random forest & $\underline{-0.0002} \pm 0.0019$ & $\underline{-0.0018} \pm 0.0060$ & 10/25; 1/5 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Increments are Base+Struct $-$ Base+G (mean $\pm$ sample standard deviation), where Base+G adds only the G module to the transaction aggregate layer (32 columns). The final column counts positive AP differences in folds and complete OOF predictions. Bold marks the largest mean increment across classifiers for each dataset and metric. Underlined means are negative; emphasis does not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

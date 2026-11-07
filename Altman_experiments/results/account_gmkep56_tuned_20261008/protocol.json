@@ -1,0 +1,340 @@
+{
+  "experiment": "account_gmkep56_nested_tuning",
+  "registered_at": "2026-10-08T21:09:21+08:00",
+  "datasets": [
+    "hi_small",
+    "li_small"
+  ],
+  "models": [
+    "lightgbm",
+    "xgboost",
+    "random_forest"
+  ],
+  "feature_sets": {
+    "base16": 16,
+    "gmke44": 44,
+    "gmkep56": 56
+  },
+  "feature_columns": {
+    "base16": [
+      "n_sent",
+      "vol_sent",
+      "avg_sent",
+      "std_sent",
+      "max_sent",
+      "n_recv_banks",
+      "n_recv",
+      "vol_recv",
+      "avg_recv",
+      "std_recv",
+      "max_recv",
+      "n_sent_banks",
+      "n_currencies",
+      "n_formats",
+      "sent_recv_ratio",
+      "degree"
+    ],
+    "gmke44": [
+      "n_sent",
+      "vol_sent",
+      "avg_sent",
+      "std_sent",
+      "max_sent",
+      "n_recv_banks",
+      "n_recv",
+      "vol_recv",
+      "avg_recv",
+      "std_recv",
+      "max_recv",
+      "n_sent_banks",
+      "n_currencies",
+      "n_formats",
+      "sent_recv_ratio",
+      "degree",
+      "A1",
+      "A2",
+      "D1",
+      "D2",
+      "nv",
+      "ev",
+      "density",
+      "cc_minus",
+      "bridge_frag",
+      "tri",
+      "clust",
+      "beta1",
+      "beta1_norm",
+      "core",
+      "core_mean",
+      "core_max",
+      "rec_out_count",
+      "rec_in_count",
+      "rec_out_ratio",
+      "rec_in_ratio",
+      "peel_score",
+      "kappa",
+      "kappa_mean",
+      "kappa_min",
+      "asym",
+      "asym2",
+      "exp_out",
+      "d_beta1"
+    ],
+    "gmkep56": [
+      "n_sent",
+      "vol_sent",
+      "avg_sent",
+      "std_sent",
+      "max_sent",
+      "n_recv_banks",
+      "n_recv",
+      "vol_recv",
+      "avg_recv",
+      "std_recv",
+      "max_recv",
+      "n_sent_banks",
+      "n_currencies",
+      "n_formats",
+      "sent_recv_ratio",
+      "degree",
+      "A1",
+      "A2",
+      "D1",
+      "D2",
+      "nv",
+      "ev",
+      "density",
+      "cc_minus",
+      "bridge_frag",
+      "tri",
+      "clust",
+      "beta1",
+      "beta1_norm",
+      "core",
+      "core_mean",
+      "core_max",
+      "rec_out_count",
+      "rec_in_count",
+      "rec_out_ratio",
+      "rec_in_ratio",
+      "peel_score",
+      "kappa",
+      "kappa_mean",
+      "kappa_min",
+      "asym",
+      "asym2",
+      "exp_out",
+      "d_beta1",
+      "ph_2hop_h0_max",
+      "ph_2hop_h0_total",
+      "ph_2hop_h0_entropy",
+      "ph_2hop_h1_max",
+      "ph_2hop_h1_total",
+      "ph_2hop_h1_entropy",
+      "ph_3hop_h0_max",
+      "ph_3hop_h0_total",
+      "ph_3hop_h0_entropy",
+      "ph_3hop_h1_max",
+      "ph_3hop_h1_total",
+      "ph_3hop_h1_entropy"
+    ]
+  },
+  "strategies": [
+    "same_protocol_anchor",
+    "tuned"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "outer_n_splits": 5,
+  "inner_n_splits": 3,
+  "candidates_per_model": 12,
+  "selection_metric": "unweighted mean of three inner-fold AP values",
+  "primary_metrics": [
+    "ap"
+  ],
+  "candidate_tie_break": "exact tie: lowest candidate_id",
+  "threshold_policies": [
+    "fixed_0.5",
+    "inner_max_f1"
+  ],
+  "prediction_rule": "y_score >= threshold",
+  "threshold_selection": "max positive-class F1 on independent threshold_validation; ties lowest threshold",
+  "rounds_aggregation": "integer median of the selected candidate's three inner early-stopping rounds",
+  "early_stopping": {
+    "metric": "unweighted AUROC",
+    "patience": 30,
+    "validation_fraction": 0.2
+  },
+  "development_threshold_split": "reuse old inner_fit and inner_calibration, 80/20 of outer_train",
+  "inner_random_state": "20000 + 100 * seed + fold",
+  "early_random_state": "30000 + 1000 * seed + 10 * fold + inner_fold",
+  "search_model_random_state": "40000 + 1000 * seed + 10 * fold + inner_fold; independent of candidate and arm",
+  "stage_model_random_state": "100 * seed + fold",
+  "class_weighting": "balanced from actual fitting labels; XGB sample_weight; eval unweighted",
+  "threads_per_worker": 2,
+  "max_concurrent_workers": 6,
+  "native_library_isolation": true,
+  "boost_search_spaces": {
+    "lightgbm": {
+      "learning_rate": [
+        0.03,
+        0.05,
+        0.1
+      ],
+      "num_leaves": [
+        15,
+        31,
+        63,
+        127
+      ],
+      "min_child_samples": [
+        10,
+        20,
+        50,
+        100
+      ],
+      "reg_alpha": [
+        0.0,
+        0.1,
+        1.0
+      ],
+      "reg_lambda": [
+        1.0,
+        5.0,
+        10.0
+      ],
+      "colsample_bytree": [
+        0.6,
+        0.8,
+        1.0
+      ],
+      "subsample": [
+        0.7,
+        0.8,
+        1.0
+      ],
+      "subsample_freq": [
+        1
+      ],
+      "n_estimators": [
+        300,
+        500,
+        700
+      ]
+    },
+    "xgboost": {
+      "learning_rate": [
+        0.03,
+        0.05,
+        0.1
+      ],
+      "max_depth": [
+        3,
+        4,
+        6,
+        8
+      ],
+      "min_child_weight": [
+        1,
+        5,
+        10
+      ],
+      "reg_alpha": [
+        0.0,
+        0.1,
+        1.0
+      ],
+      "reg_lambda": [
+        1.0,
+        5.0,
+        10.0
+      ],
+      "colsample_bytree": [
+        0.6,
+        0.8,
+        1.0
+      ],
+      "subsample": [
+        0.7,
+        0.8,
+        1.0
+      ],
+      "n_estimators": [
+        300,
+        500,
+        700
+      ]
+    }
+  },
+  "rf_profiles": [
+    {},
+    {
+      "max_depth": 10,
+      "min_samples_leaf": 10,
+      "max_features": 0.5
+    },
+    {
+      "max_depth": 20,
+      "min_samples_leaf": 2
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 10
+    },
+    {
+      "max_depth": 14,
+      "min_samples_leaf": 5,
+      "max_features": 0.5,
+      "max_samples": 0.6
+    },
+    {
+      "max_depth": 20,
+      "min_samples_leaf": 5,
+      "max_features": 0.25,
+      "max_samples": 1.0
+    }
+  ],
+  "rf_tree_candidates": [
+    100,
+    200
+  ],
+  "rf_prefix_reuse": "fit 200 trees per profile/inner fold; candidate100 uses first100; tested independently",
+  "prediction_order": "RF probability accumulation n_jobs=1; fitting n_jobs=2",
+  "candidate0_runtime_changes": "n_jobs=2; LGB deterministic=True,force_col_wise=True,subsample_freq=0; structural hyperparameters unchanged",
+  "search_storage": "all full-order rank/tie audits; retain selected inner_fold0 model/rawscore; unselected models not retained",
+  "audit_encoding": "little-endian packbits: order elements represented least-significant-bit first; width=max(1,ceil(log2(n)))",
+  "model_storage": "joblib xz level3; tuned selected0 references anchor physical artifacts",
+  "expected_outer_settings": 450,
+  "logical_candidate_evaluations": 16200,
+  "expected_search_physical_fits": 13500,
+  "expected_representative_refits": 450,
+  "expected_strategy_final_models_logical": 900,
+  "expected_strategy_threshold_models_logical": 900,
+  "old_fixed_source": "Altman_experiments/results/account_gmkep56_multiclassifier_20261008",
+  "old_protocol_sha256": "674b620312f5c129ca452516a5f7310476acecc55332fbf82b96d211e95505d7",
+  "trainer_sha256": "0316bcc832dd6fadb9829d21a416a8a1a30aef3240307078724a1af772e29462",
+  "helper_sha256": "4032a1a30a6aac6d1048fce6396616d7bd7da61cb3da095343b1c08c7b485ad1",
+  "candidates_sha256": "686557b65476471c0d22c87c7e035dff46db2d43a5bc5becd2b92a3666365c20",
+  "dataset_inputs_sha256": "3802d5b23694d29c4b49f9b909a4c6de2c424108563922c8d5a3f254ee61faaf",
+  "split_manifest_sha256": "e37b42d32dd841249302de9d4b5f10666174f58048dac2261f27421d54c21e81",
+  "summary_std_ddof": 1,
+  "evaluation_scope": "Whole-period graph and random stratified accounts: static transductive development recognition, not temporal prediction or independent final confirmation",
+  "interpretation": "finite-budget developmental search; no global optimum, independent confirmation or causal PH claim",
+  "environment": {
+    "python": "3.11.13",
+    "machine": "arm64",
+    "cpu_count": 14,
+    "numpy": "2.4.4",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "lightgbm": "4.6.0",
+    "xgboost": "3.2.0",
+    "joblib": "1.4.2",
+    "pyarrow": "23.0.1"
+  }
+}

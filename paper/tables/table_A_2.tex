@@ -1,0 +1,54 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Directed structural layer S (columns 17--44).}
+\label{tab:dict-s}
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{@{}rL{3.05cm}L{4.6cm}L{6.6cm}@{}}
+\toprule
+No. & Column & Definition & Description \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Local size and connectivity G}} \\
+17 & \texttt{A1} & $\#N_1^{-}(v)$ & Direct predecessors \\
+18 & \texttt{A2} & $\#N_2^{-}(v)$ & New predecessors two steps upstream along incoming edges \\
+19 & \texttt{D1} & $\#N_1^{+}(v)$ & Direct successors \\
+20 & \texttt{D2} & $\#N_2^{+}(v)$ & New successors two steps downstream along outgoing edges \\
+21 & \texttt{nv} & $n_v=\#W_v$ & Size of the directed local set, including the centre \\
+22 & \texttt{ev} & $e_v$ & Edges of the local undirected induced graph $H_v$ \\
+23 & \texttt{density} & $2e_v/[n_v(n_v-1)]$; 0 if $n_v\le1$ & Edge density of $H_v$ \\
+24 & \texttt{cc\_minus} & $C_v^{-}$ & Connected components of $H_v-\{v\}$ \\
+25 & \texttt{bridge\_frag} & $C_v^{-}-C_v$ & Change in components when the centre is removed; $-1$ for an isolated account \\
+26 & \texttt{tri} & $\mathrm{tri}$ & Triangles at the centre \\
+27 & \texttt{clust} & $2\,\mathrm{tri}/[k_v(k_v-1)]$; 0 if $k_v<2$ & Clustering among the distinct neighbours of the centre \\
+28 & \texttt{beta1} & $\beta_1=e_v-n_v+C_v$ & Cycle rank of $H_v$ \\
+29 & \texttt{beta1\_norm} & $\beta_1/(n_v+1)$ & Size-normalised cycle rank \\
+30 & \texttt{core} & $\operatorname{core}_U(v)$ & Core number of the centre \\
+31 & \texttt{core\_mean} & $n_v^{-1}\sum_{u\in W_v}\operatorname{core}_U(u)$ & Mean core number over the local set \\
+32 & \texttt{core\_max} & $\max_{u\in W_v}\operatorname{core}_U(u)$ & Highest core number reached by the local set \\
+\addlinespace
+\multicolumn{4}{@{}l}{\textit{Reconvergence and branching M}} \\
+33 & \texttt{rec\_out\_count} & $\sum_{w\in N_2^{+}(v)}\mathbf{1}\{m_v^{+}(w)\ge2\}$ & New two-hop successors reached through at least two direct successors \\
+34 & \texttt{rec\_in\_count} & $\sum_{x\in N_2^{-}(v)}\mathbf{1}\{m_v^{-}(x)\ge2\}$ & New two-hop predecessors that reach the centre through at least two direct predecessors \\
+35 & \texttt{rec\_out\_ratio} & $1-D2/(W_v^{+}+1)$ & Downstream path-overlap proxy; 1 if no two-step walk exists \\
+36 & \texttt{rec\_in\_ratio} & $1-A2/(W_v^{-}+1)$ & Upstream path-overlap proxy; 1 if no two-step walk exists \\
+37 & \texttt{peel\_score} & $\mathbf{1}\{D1\ge2\}\,\phi_v\lambda_v/(D1+1)^2$ & Mix of forwarding and terminal successor branches \\
+\addlinespace
+\multicolumn{4}{@{}l}{\textit{Curvature proxy K}} \\
+38 & \texttt{kappa} & $(\#E_v^{\circ})^{-1}\sum_{e\in E_v^{\circ}}q_v(e)$ & Mean curvature proxy of the edges at the centre \\
+39 & \texttt{kappa\_mean} & $e_v^{-1}\sum_{e\in E(H_v)}q_v(e)$ & Mean curvature proxy over $H_v$ \\
+40 & \texttt{kappa\_min} & $\min_{e\in E(H_v)}q_v(e)$ & Minimum curvature proxy over $H_v$ \\
+\addlinespace
+\multicolumn{4}{@{}l}{\textit{Derived ratios E}} \\
+41 & \texttt{asym} & $|D1-A1|/(A1+D1+1)$ & One-hop upstream--downstream imbalance \\
+42 & \texttt{asym2} & $|D2-A2|/(A2+D2+1)$ & Two-hop upstream--downstream imbalance \\
+43 & \texttt{exp\_out} & $D2/(D1+1)$ & Downstream expansion from one to two hops \\
+44 & \texttt{d\_beta1} & $b_1(H_v)-b_1(H_v^{(1)})=\beta_1-\mathrm{tri}$ & Cycle rank added beyond the one-hop induced graph \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} G, M, K and E use the untruncated local set $W_v$ and its induced graph $H_v$ (Section~\ref{sec:struct}). The prefix ``rec'' denotes two-step reconvergence, not reciprocal edges. Means and minima of the curvature proxy over an empty edge set are 0.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

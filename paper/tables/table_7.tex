@@ -1,0 +1,50 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\caption{Positive-account coverage and alert precision at a 1\% test-fold budget.}
+\label{tab:budget}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{HI-Small} & \multicolumn{2}{c}{LI-Small} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Method and input & Recall@1\% & Precision@1\% & Recall@1\% & Precision@1\% \\
+\midrule
+LightGBM, Base (16) & 0.2457 & 0.3030 & 0.1399 & 0.1051 \\
+LightGBM, Base+G (32) & 0.2862 & 0.3530 & 0.1523 & 0.1144 \\
+LightGBM, Base+Struct (44) & 0.2869 & 0.3538 & 0.1524 & 0.1145 \\
+LightGBM, Full (56) & \textbf{0.2916} & \textbf{0.3596} & \textbf{0.1528} & \textbf{0.1148} \\
+\addlinespace
+XGBoost, Base (16) & 0.2484 & 0.3063 & 0.1480 & 0.1112 \\
+XGBoost, Base+G (32) & 0.2850 & 0.3515 & 0.1578 & 0.1185 \\
+XGBoost, Base+Struct (44) & 0.2898 & 0.3574 & 0.1583 & 0.1190 \\
+XGBoost, Full (56) & \textbf{0.2906} & \textbf{0.3584} & \textbf{0.1589} & \textbf{0.1194} \\
+\addlinespace
+Random forest, Base (16) & 0.2444 & 0.3013 & 0.1391 & 0.1045 \\
+Random forest, Base+G (32) & 0.2927 & 0.3609 & 0.1485 & 0.1116 \\
+Random forest, Base+Struct (44) & 0.2962 & 0.3653 & 0.1459 & 0.1096 \\
+Random forest, Full (56) & \textbf{0.3029} & \textbf{0.3735} & \textbf{0.1542} & \textbf{0.1158} \\
+\addlinespace
+MLP, Base (16) & 0.2422 & 0.2987 & 0.1457 & 0.1094 \\
+MLP, Base+G (32) & 0.2629 & 0.3242 & 0.1503 & 0.1129 \\
+MLP, Base+Struct (44) & \textbf{0.2738} & \textbf{0.3376} & \textbf{0.1542} & \textbf{0.1159} \\
+MLP, Full (56) & 0.2708 & 0.3339 & 0.1535 & 0.1154 \\
+\addlinespace
+GraphSAGE, Base (16) & 0.3702 & 0.4565 & 0.1912 & 0.1437 \\
+GraphSAGE, Base+G (32) & \underline{\textbf{0.3755}} & \underline{\textbf{0.4631}} & \underline{\textbf{0.2008}} & \underline{\textbf{0.1508}} \\
+GraphSAGE, Base+Struct (44) & 0.3710 & 0.4575 & 0.1988 & 0.1493 \\
+GraphSAGE, Full (56) & 0.3746 & 0.4620 & 0.1986 & 0.1492 \\
+\addlinespace
+% GFP extension: account_gfp_alert_budget_extension_20261106/combined_budget_summary.csv
+LightGBM, GFP (712) & \textbf{0.3277} & \textbf{0.4041} & 0.1511 & 0.1135 \\
+XGBoost, GFP (712) & 0.3140 & 0.3872 & \textbf{0.1553} & \textbf{0.1167} \\
+Random forest, GFP (712) & 0.2737 & 0.3375 & 0.1350 & 0.1014 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Means over 25 shared outer folds. Each fold selects the top $\lceil0.01n_{\mathrm{test}}\rceil$ accounts by tuned score, breaking ties by ascending account row index. Bold marks column maxima within each block (across inputs, or across classifiers for GFP); underlining marks overall column maxima. Displayed ties share emphasis; emphasis does not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

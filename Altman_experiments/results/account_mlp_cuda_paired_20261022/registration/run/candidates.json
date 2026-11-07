@@ -1,0 +1,124 @@
+{
+  "status": "proposed_pre_execution",
+  "shared_by": [
+    "mlp",
+    "graphsage_weak",
+    "graphsage_directed"
+  ],
+  "candidates": [
+    {
+      "candidate_id": 0,
+      "params": {
+        "hidden_dim": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      }
+    },
+    {
+      "candidate_id": 1,
+      "params": {
+        "hidden_dim": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      }
+    },
+    {
+      "candidate_id": 2,
+      "params": {
+        "hidden_dim": 64,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      }
+    },
+    {
+      "candidate_id": 3,
+      "params": {
+        "hidden_dim": 64,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      }
+    },
+    {
+      "candidate_id": 4,
+      "params": {
+        "hidden_dim": 128,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      }
+    },
+    {
+      "candidate_id": 5,
+      "params": {
+        "hidden_dim": 128,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      }
+    },
+    {
+      "candidate_id": 6,
+      "params": {
+        "hidden_dim": 128,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      }
+    },
+    {
+      "candidate_id": 7,
+      "params": {
+        "hidden_dim": 128,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      }
+    },
+    {
+      "candidate_id": 8,
+      "params": {
+        "hidden_dim": 256,
+        "learning_rate": 0.001,
+        "dropout": 0.0
+      }
+    },
+    {
+      "candidate_id": 9,
+      "params": {
+        "hidden_dim": 256,
+        "learning_rate": 0.001,
+        "dropout": 0.2
+      }
+    },
+    {
+      "candidate_id": 10,
+      "params": {
+        "hidden_dim": 256,
+        "learning_rate": 0.003,
+        "dropout": 0.0
+      }
+    },
+    {
+      "candidate_id": 11,
+      "params": {
+        "hidden_dim": 256,
+        "learning_rate": 0.003,
+        "dropout": 0.2
+      }
+    }
+  ],
+  "fixed": {
+    "layers": 2,
+    "optimizer": "Adam",
+    "weight_decay": 0.0001,
+    "max_epochs": 200,
+    "patience": 30,
+    "seed_batch_size": 2048,
+    "weak_fanouts": [
+      15,
+      10
+    ],
+    "directed_fanouts_per_relation": [
+      10,
+      5
+    ],
+    "replace": false,
+    "inference": "deterministic layerwise all-neighbor; sampling fallback is a new protocol version, not a per-arm exception"
+  }
+}

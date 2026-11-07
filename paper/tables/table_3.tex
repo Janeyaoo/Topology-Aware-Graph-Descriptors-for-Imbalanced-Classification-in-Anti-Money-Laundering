@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{1.75pt}
+\caption{Tuned average precision of the four inputs and paired increment of Full over Base+G.}
+\label{tab:ap}
+\begin{threeparttable}
+\begin{tabular}{llccccc}
+\toprule
+Dataset & Classifier & Base (16) & Base+G (32) & Base+Struct (44) & Full (56) & \shortstack{\textbf{Beyond G}\\Full$-$(Base+G)} \\
+\midrule
+HI & LightGBM & $0.2545 \pm 0.0149$ & $0.3053 \pm 0.0147$ & $0.3076 \pm 0.0157$ & $\mathbf{0.3182} \pm 0.0142$ & \incrementAP{flowblue!19.35}{+0.0129}{0.0088} \\
+HI & XGBoost & $0.2654 \pm 0.0135$ & $0.3082 \pm 0.0156$ & $0.3136 \pm 0.0168$ & $\mathbf{0.3194} \pm 0.0148$ & \incrementAP{flowblue!16.8}{+0.0112}{0.0052} \\
+HI & Random forest & $0.2512 \pm 0.0137$ & $0.3005 \pm 0.0156$ & $0.3027 \pm 0.0165$ & $\mathbf{0.3178} \pm 0.0164$ & \incrementAP{flowblue!25.95}{+0.0173}{0.0038} \\
+\addlinespace
+LI & LightGBM & $0.0780 \pm 0.0078$ & $\mathbf{0.0998} \pm 0.0081$ & $0.0969 \pm 0.0085$ & $0.0991 \pm 0.0094$ & \incrementAP{floworange!1.2}{-0.0008}{0.0055} \\
+LI & XGBoost & $0.0893 \pm 0.0079$ & $0.1031 \pm 0.0078$ & $0.1022 \pm 0.0075$ & $\mathbf{0.1035} \pm 0.0093$ & \incrementAP{flowblue!0.6}{+0.0004}{0.0048} \\
+LI & Random forest & $0.0746 \pm 0.0053$ & $0.0807 \pm 0.0055$ & $0.0761 \pm 0.0055$ & $\mathbf{0.0821} \pm 0.0053$ & \incrementAP{flowblue!2.1}{+0.0014}{0.0029} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Means $\pm$ sample standard deviations over 25 outer folds. The final column reports paired fold differences, highlighting the joint increment of M, K, E and P beyond T+G. HI and LI denote HI-Small and LI-Small throughout the results tables. In the four input columns, bold marks the highest mean AP in each row; ties at the displayed precision are bolded together. In the final column, all paired means are bold for emphasis. Blue and orange shading indicate positive and negative mean increments, respectively; intensity scales linearly with magnitude on the same scale for both datasets (white at zero, 30\% tint at $|\Delta\mathrm{AP}|=0.02$). Emphasis and shading do not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

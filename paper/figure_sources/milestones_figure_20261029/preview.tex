@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[paperwidth=12.8in,paperheight=5.2in,margin=0pt]{geometry}
+% Use the actual installed Arial family, including its true bold face.
+\usepackage{fontspec}
+\setmainfont{Arial}[
+  Path=/System/Library/Fonts/Supplemental/,
+  Extension=.ttf,
+  UprightFont=Arial,
+  BoldFont=Arial Bold,
+  ItalicFont=Arial Italic,
+  BoldItalicFont=Arial Bold Italic]
+\setsansfont{Arial}[
+  Path=/System/Library/Fonts/Supplemental/,
+  Extension=.ttf,
+  UprightFont=Arial,
+  BoldFont=Arial Bold,
+  ItalicFont=Arial Italic,
+  BoldItalicFont=Arial Bold Italic]
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,backgrounds}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Graph-based research timeline},
+  pdfsubject={Compact title-only research timeline}}
+\def\MilestoneAudit{1}
+\pagestyle{empty}
+% Anchor vector artwork to a fixed page, preserving the compact 32:13 MediaBox.
+\tikzset{every picture/.append style={remember picture,overlay,
+  shift={(current page.north west)}}}
+\begin{document}
+\null
+\input{milestones_figure.tex}
+\end{document}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "source_files_checked": 302,
+  "accepted_outer_folds": 100,
+  "complete_settings": 4,
+  "folds_per_setting": 25,
+  "source_validation_sha256": "766aba3e91112fbe3c7a264eaa1b08b88ff532f543df0428cf76c8d26f427bda",
+  "verified_fold_metrics_sha256": "8d7a910274ee38220149f5410f003288dccc0b3dd5b62bd13196674dc67bdfa2",
+  "notes": [
+    "Search-fit means sum actual candidate fit_seconds, retaining zero-cost RF reuse.",
+    "Final-fit means use physical anchor fit time where the tuned model reuses the anchor.",
+    "Complete-fold elapsed times are medians of DONE.runtime_seconds divided by 60.",
+    "No dedicated outer inference timer exists; no inference values inferred.",
+    "No models retrained; only existing accepted metadata read."
+  ]
+}

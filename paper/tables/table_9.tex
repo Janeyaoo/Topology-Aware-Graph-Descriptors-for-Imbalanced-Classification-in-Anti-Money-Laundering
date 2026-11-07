@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Paired $\Delta$AP and $\Delta$AUROC under the fixed-parameter comparator.}
+\label{tab:fixed}
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{llcccc}
+\toprule
+& & \multicolumn{2}{c}{Base+Struct $-$ Base} & \multicolumn{2}{c}{Full $-$ Base+Struct} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Dataset & Classifier & $\Delta$AP & $\Delta$AUROC & $\Delta$AP & $\Delta$AUROC \\
+\midrule
+HI-Small & LightGBM & $\mathbf{+0.0609} \pm 0.0114$ & $+0.0349 \pm 0.0026$ & $\mathbf{+0.0092} \pm 0.0074$ & $+0.0037 \pm 0.0010$ \\
+HI-Small & XGBoost & $+0.0506 \pm 0.0065$ & $+0.0359 \pm 0.0032$ & $+0.0046 \pm 0.0043$ & $\mathbf{+0.0038} \pm 0.0009$ \\
+HI-Small & Random forest & $+0.0111 \pm 0.0084$ & $\mathbf{+0.0416} \pm 0.0027$ & $+0.0003 \pm 0.0050$ & $+0.0029 \pm 0.0007$ \\
+\addlinespace
+LI-Small & LightGBM & $\mathbf{+0.0230} \pm 0.0070$ & $+0.0445 \pm 0.0029$ & $\mathbf{+0.0015} \pm 0.0040$ & $+0.0043 \pm 0.0011$ \\
+LI-Small & XGBoost & $+0.0150 \pm 0.0043$ & $+0.0459 \pm 0.0034$ & $\underline{-0.0002} \pm 0.0036$ & $\mathbf{+0.0046} \pm 0.0017$ \\
+LI-Small & Random forest & $+0.0010 \pm 0.0045$ & $\mathbf{+0.0504} \pm 0.0041$ & $\underline{-0.0006} \pm 0.0012$ & $+0.0028 \pm 0.0011$ \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Mean $\pm$ sample standard deviation of the 25 paired differences. The corresponding tuned increments are in Table~\ref{tab:paired}. Bold marks the largest mean increment across classifiers for the same dataset, comparison and metric. Underlined means are negative; emphasis does not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

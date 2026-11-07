@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Empirical quantities that determine the cost of descriptor construction.}
+\label{tab:complexity}
+\begin{threeparttable}
+\begin{tabular}{lrr}
+\toprule
+Quantity & HI-Small & LI-Small \\
+\midrule
+$\sum_u d(u)^2$ & $3.31\times10^{8}$ & $6.00\times10^{8}$ \\
+Structural layer $n_v$: median / 99th pct.\ / max & 4 / 555 / 32,033 & 4 / 795 / 42,541 \\
+$\sum_v n_v$ (mean per account) & $2.63\times10^{7}$ (51.0) & $4.94\times10^{7}$ (70.0) \\
+$\sum_v P_v$ & $2.46\times10^{7}$ & $4.71\times10^{7}$ \\
+$\sum_v(D1\cdot D2+A1\cdot A2)$ (share of largest account) & $4.08\times10^{8}$ (60.2\%) & $7.38\times10^{8}$ (58.5\%) \\
+Accounts whose PH sample reaches the vertex cap & 49.3\% & 48.6\% \\
+Sampled vertices $n_3$: mean / median & 25.0 / 39 & 24.8 / 38 \\
+Scale 1 edges / triangles: mean (max) & 25.9 (150) / 1.4 (220) & 25.6 (185) / 1.4 (360) \\
+Scale 2 edges / triangles: mean (max) & 213 (780) / 1,752 (9,880) & 209 (780) / 1,703 (9,880) \\
+BFS scan $B_v$: median / 99th pct.\ / max & 53 / 14,949 / 24,214 & 51 / 19,889 / 32,370 \\
+Distinct subgraphs that must be computed & 57.0\% & 56.6\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Symbols are defined in Sections~\ref{sec:struct}--\ref{sec:ph} and Appendix~\ref{app:complexity}; pct., percentile. The degree distribution is given in Table~\ref{tab:data}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

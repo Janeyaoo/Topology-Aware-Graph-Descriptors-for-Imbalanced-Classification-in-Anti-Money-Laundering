@@ -1,0 +1,42 @@
+{
+  "hi_small": {
+    "n_samples": 515088,
+    "n_positive": 6357,
+    "source_features": "Altman_experiments/results/account_s10_increment_20261008/hi_small/features.parquet",
+    "source_sha256": {
+      "Altman_experiments/results/account_s10_increment_20261008/hi_small/features.parquet": "6601642592f6d38da2f5bd23a0eec00b7c6517f508036ece48da4b5d4e736251",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/protocol.json": "674b620312f5c129ca452516a5f7310476acecc55332fbf82b96d211e95505d7",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/validation_models.json": "795067eab7def0c7dbcd0f25825dce2aa954ac8151645857af64d0b9415189ca",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/summary.csv": "e1cb6477b2a4dc256de83f178b515386898c7f794f1f2f757ae916a0f1bb9be7",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/fold_metrics.csv": "efed60f3100dab103e81a169265810976b59288ce25cba56c321d96bf3200a27",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/seed_oof_metrics.csv": "dff7d202eff5e4ee0623ee08938d0b716dd51d81b3a4aa55b4c7c03bcd39d0d8",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/source_settings.json": "1af67ac21035ae727f5e4a43b251778ae1efb4febe8f781c8d235566b00e6a91",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/dataset_inputs.json": "17d660190e987ecb280413b88b31c29b4f2abbb707bb3adfc48eb6119fd9ae8f"
+    },
+    "cache_sha256": {
+      "Altman_experiments/results/account_gmkep56_tuned_20261008/hi_small/arrays/features.npy": "24b6b97fb2985da87ae82ed2373d0ec7e554d3d544aeb7c458f92d554d00e278",
+      "Altman_experiments/results/account_gmkep56_tuned_20261008/hi_small/arrays/labels.npy": "3c5224b68b4a2595df8d5c5e1cc4167e6f3cf7cba9c28fe20ad4dab42577a710",
+      "Altman_experiments/results/account_gmkep56_tuned_20261008/hi_small/accounts.parquet": "894ee872b98c693d83ebc6501b5f1b4a5b2f45291cb5e58e4f3bbade7c85aed7"
+    }
+  },
+  "li_small": {
+    "n_samples": 705907,
+    "n_positive": 5304,
+    "source_features": "Altman_experiments/results/account_s10_increment_20261008/li_small/features.parquet",
+    "source_sha256": {
+      "Altman_experiments/results/account_s10_increment_20261008/li_small/features.parquet": "b63703c3cbea2bfe56e56a7a38346a880c292b94922d3fd5051a9e903462a179",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/protocol.json": "674b620312f5c129ca452516a5f7310476acecc55332fbf82b96d211e95505d7",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/validation_models.json": "795067eab7def0c7dbcd0f25825dce2aa954ac8151645857af64d0b9415189ca",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/summary.csv": "e1cb6477b2a4dc256de83f178b515386898c7f794f1f2f757ae916a0f1bb9be7",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/fold_metrics.csv": "efed60f3100dab103e81a169265810976b59288ce25cba56c321d96bf3200a27",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/seed_oof_metrics.csv": "dff7d202eff5e4ee0623ee08938d0b716dd51d81b3a4aa55b4c7c03bcd39d0d8",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/source_settings.json": "1af67ac21035ae727f5e4a43b251778ae1efb4febe8f781c8d235566b00e6a91",
+      "Altman_experiments/results/account_gmkep56_multiclassifier_20261008/dataset_inputs.json": "17d660190e987ecb280413b88b31c29b4f2abbb707bb3adfc48eb6119fd9ae8f"
+    },
+    "cache_sha256": {
+      "Altman_experiments/results/account_gmkep56_tuned_20261008/li_small/arrays/features.npy": "aec0ed1293af24a17714f177bfe5cb0ad73b43a10c0bd1ac55b1f05f9accca69",
+      "Altman_experiments/results/account_gmkep56_tuned_20261008/li_small/arrays/labels.npy": "bbc54aa5ed07072009748b142d528f41fb94a64aab5b4446294acf08a9bc0280",
+      "Altman_experiments/results/account_gmkep56_tuned_20261008/li_small/accounts.parquet": "b5d5827f6734d3c4c106555b98d627fb49f7189fe85fc5fe9068ff6f49d0ed83"
+    }
+  }
+}

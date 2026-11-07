@@ -1,0 +1,41 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{1pt}
+\caption{Paired AP increments from module retraining and PH controls.}
+\label{tab:controls}
+\begin{threeparttable}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+& \multicolumn{3}{c}{HI-Small} & \multicolumn{3}{c}{LI-Small} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Comparison & LightGBM & XGBoost & RF & LightGBM & XGBoost & RF \\
+\midrule
+\multicolumn{7}{l}{\textit{A. Module additions and losses on removal}} \\
+Add G to Base & \controlAP{\mathbf{+0.0508}}{0.0104} & \controlAP{\mathbf{+0.0428}}{0.0069} & \controlAP{\mathbf{+0.0494}}{0.0065} & \controlAP{\mathbf{+0.0218}}{0.0072} & \controlAP{\mathbf{+0.0138}}{0.0050} & \controlAP{+0.0061}{0.0046} \\
+Add M to Base & \controlAP{+0.0388}{0.0103} & \controlAP{+0.0357}{0.0057} & \controlAP{+0.0298}{0.0043} & \controlAP{+0.0151}{0.0075} & \controlAP{+0.0102}{0.0045} & \controlAP{\mathbf{+0.0115}}{0.0038} \\
+Add K to Base & \controlAP{+0.0318}{0.0089} & \controlAP{+0.0274}{0.0055} & \controlAP{+0.0339}{0.0049} & \controlAP{+0.0132}{0.0065} & \controlAP{+0.0123}{0.0052} & \controlAP{+0.0042}{0.0037} \\
+Add E to Base & \controlAP{+0.0337}{0.0085} & \controlAP{+0.0305}{0.0051} & \controlAP{+0.0277}{0.0045} & \controlAP{+0.0161}{0.0070} & \controlAP{+0.0071}{0.0063} & \controlAP{+0.0095}{0.0039} \\
+Add P to Base & \controlAP{+0.0133}{0.0075} & \controlAP{+0.0130}{0.0034} & \controlAP{+0.0187}{0.0038} & \controlAP{+0.0087}{0.0068} & \controlAP{+0.0055}{0.0052} & \controlAP{+0.0088}{0.0035} \\
+\addlinespace
+Remove G/E & \controlAP{\mathbf{+0.0116}}{0.0074} & \controlAP{\mathbf{+0.0121}}{0.0040} & \controlAP{+0.0084}{0.0037} & \controlAP{\mathbf{+0.0040}}{0.0057} & \controlAP{\mathbf{+0.0030}}{0.0049} & \controlAP{\underline{-0.0057}}{0.0030} \\
+Remove M & \controlAP{+0.0016}{0.0069} & \controlAP{\underline{-0.0016}}{0.0030} & \controlAP{\underline{-0.0008}}{0.0026} & \controlAP{\underline{-0.0002}}{0.0052} & \controlAP{\underline{-0.0011}}{0.0049} & \controlAP{\underline{-0.0010}}{0.0016} \\
+Remove K & \controlAP{+0.0038}{0.0064} & \controlAP{+0.0024}{0.0041} & \controlAP{+0.0023}{0.0029} & \controlAP{\underline{-0.0031}}{0.0038} & \controlAP{+0.0003}{0.0047} & \controlAP{\underline{-0.0023}}{0.0021} \\
+Remove E & \controlAP{+0.0045}{0.0063} & \controlAP{+0.0014}{0.0034} & \controlAP{\underline{-0.0006}}{0.0027} & \controlAP{+0.0010}{0.0046} & \controlAP{\underline{-0.0011}}{0.0034} & \controlAP{\underline{-0.0016}}{0.0017} \\
+Remove P & \controlAP{+0.0106}{0.0074} & \controlAP{+0.0058}{0.0060} & \controlAP{\mathbf{+0.0151}}{0.0030} & \controlAP{+0.0022}{0.0061} & \controlAP{+0.0013}{0.0053} & \controlAP{\mathbf{+0.0060}}{0.0022} \\
+\midrule
+\multicolumn{7}{l}{\textit{B. PH and size or simplex-count controls}} \\
+Add H0 & \controlAP{+0.0063}{0.0067} & \controlAP{+0.0032}{0.0056} & \controlAP{+0.0121}{0.0025} & \controlAP{+0.0016}{0.0056} & \controlAP{+0.0018}{0.0047} & \controlAP{+0.0073}{0.0024} \\
+H1 given H0 & \controlAP{+0.0043}{0.0062} & \controlAP{+0.0026}{0.0047} & \controlAP{+0.0030}{0.0031} & \controlAP{+0.0006}{0.0047} & \controlAP{\underline{-0.0006}}{0.0036} & \controlAP{\underline{-0.0013}}{0.0014} \\
+Add N & \controlAP{+0.0066}{0.0076} & \controlAP{+0.0030}{0.0064} & \controlAP{+0.0094}{0.0027} & \controlAP{+0.0018}{0.0062} & \controlAP{+0.0031}{0.0053} & \controlAP{+0.0051}{0.0019} \\
+H1 given N & \controlAP{+0.0026}{0.0078} & \controlAP{+0.0044}{0.0043} & \controlAP{+0.0042}{0.0028} & \controlAP{\underline{-0.0005}}{0.0052} & \controlAP{\underline{-0.0015}}{0.0030} & \controlAP{+0.0004}{0.0016} \\
+Add Q & \controlAP{+0.0136}{0.0084} & \controlAP{+0.0101}{0.0076} & \controlAP{+0.0215}{0.0036} & \controlAP{+0.0029}{0.0052} & \controlAP{+0.0015}{0.0045} & \controlAP{+0.0080}{0.0036} \\
+H1 given Q & \controlAP{+0.0023}{0.0078} & \controlAP{+0.0021}{0.0051} & \controlAP{+0.0014}{0.0024} & \controlAP{+0.0001}{0.0043} & \controlAP{+0.0001}{0.0032} & \controlAP{\underline{-0.0013}}{0.0019} \\
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\setlength{\labelsep}{0pt}\item[] \textit{Note.} Mean AP increments, with $\pm$ sample SD in smaller lower-right type, over 25 paired fold differences after separate tuning. RF: random forest. In A, addition rows subtract Base; removal rows report Full minus the input without the named module, so positive values indicate a loss on removal. G and E are removed jointly. In B, Add H0, Add N and Add Q compare Base+Struct augmented with the named control against Base+Struct; each H1 row adds H1 to the matching control input. N contains raw sample counts $n_2,n_3$; Q contains ten vertex, edge and triangle counts. Bold marks the largest mean in each column of A, separately for additions and deletions. B has different reference inputs and is not ranked. Underlined means are negative; emphasis does not indicate statistical significance.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
