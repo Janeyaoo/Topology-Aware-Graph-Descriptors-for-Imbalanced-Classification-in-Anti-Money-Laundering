@@ -1,4 +1,4 @@
-# FlowTopo / TopoAML reproducibility materials
+# TopoAML reproducibility materials
 
 Code and compact results for **Topology-Aware Graph Descriptors for Imbalanced
 Classification in Anti-Money Laundering** (manuscript snapshot: 2026-11-07).
