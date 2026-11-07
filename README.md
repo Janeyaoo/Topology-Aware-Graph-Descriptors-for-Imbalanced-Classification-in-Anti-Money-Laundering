@@ -2,7 +2,7 @@
 
 Code and compact results for **Topology-Aware Graph Descriptors for Imbalanced
 Classification in Anti-Money Laundering** (manuscript snapshot: 2026-11-07).
-FlowTopo is the project name; **TopoAML** is the account representation evaluated
+ **TopoAML** is the account representation evaluated
 in this manuscript. This package concerns IBM AML **HI-Small and LI-Small**. It
 does not describe the project's earlier Elliptic, PaySim or XBlock experiments.
 
