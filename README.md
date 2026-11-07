@@ -9,6 +9,34 @@ does not describe the project's earlier Elliptic, PaySim or XBlock experiments.
 The package includes the current additions to Table C.1 (six Base+G rows), Table
 5B (N/Q controls), and Table C.7 (all three GFP classifiers).
 
+## Study design
+
+### Research context and positioning
+
+![Figure 1. Research milestones and the methodological positioning of TopoAML](paper/figures/fig01_research_milestones.png)
+
+**Figure 1. Research milestones and positioning of TopoAML.** Representative
+milestones distinguish explicit graph analysis and descriptors, learned graph
+representations, and general persistent-homology methods. Letter K denotes this
+study, which evaluates the incremental value and redundancy of account-level
+descriptors. [View vector PDF](paper/figures/fig01_research_milestones.pdf).
+
+### TopoAML framework and paired evaluation
+
+![Figure 2. TopoAML account-level feature extraction and evaluation framework](paper/figures/fig02_topoaml_framework.png)
+
+**Figure 2. From transaction records to account representations and risk ranking.**
+TopoAML combines 16 transaction aggregates (T), 28 directed structural descriptors
+(S), and 12 persistent-homology summaries (P). Four nested inputs—Base (16),
+Base+G (32), Base+Struct (44), and Full (56)—are compared within each tree learner
+using shared account splits and independent tuning. Scores rank accounts for
+alerts at a fixed review budget.
+
+The evaluation is static and transductive: the graph includes all observed
+accounts, while labels are excluded from descriptor extraction and test labels
+are excluded from model fitting and selection.
+[View vector PDF](paper/figures/fig02_topoaml_framework.pdf).
+
 ## Quick start: audit and reconstruct saved summaries
 
 Only Python 3.10+ and its standard library are needed for this command:
